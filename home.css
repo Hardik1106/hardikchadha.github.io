@@ -1,0 +1,26 @@
+#main_heading{
+    font-size: 250%;
+    font-weight: bold;
+    color: #553b4a;
+    text-align: center;
+}
+
+#sub_heading{
+    font-size: 150%;
+    font-weight: bold;
+    color: #553b4a;
+    text-align: center;
+}
+
+#profilepic{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #553b4a;
+}
+.picture{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+}
