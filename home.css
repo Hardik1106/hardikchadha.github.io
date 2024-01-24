@@ -10,6 +10,14 @@
     padding: 2%;
     border-bottom: 1% solid #553b4a;
 }
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: #f4f4f4;
+    text-decoration: none;
+}
 
 #main_heading{
     font-size: 250%;
@@ -21,9 +29,12 @@
 
 .top_heading{
     display: flex;
+    justify-content: space-evenly;
+    align-items: left;
     border-color: #553b4a;
     border-width: .4;
-    justify-content: space-evenly;
+    padding-left: 2%;
+    align-content: start;
 }
 
 #sub_heading{
@@ -38,10 +49,94 @@
     height: 200px;
     border-radius: 50%;
     border: 5px solid #553b4a;
-    :hover{
-        opacity: 0.7;
-    }
 }
 #profilepic:hover{
     opacity: 0.7;
+}
+
+.about, .education, .achievements, .skills, .projects, .contact{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    border-color: #553b4a;
+    border-width: .4;
+    padding-top: 4%;
+    padding-left: 2%;
+    align-content: start;
+    font-size: 100%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: left;
+}
+body {
+    /* Light mode colors */
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+body.dark-mode {
+    /* Dark mode colors */
+    color: #f4f4f4;
+    background-color: #333;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+    .switch {
+        width: 30px;
+        height: 17px;
+    }
+
+    .slider:before {
+        height: 13px;
+        width: 13px;
+    }
+
+    input:checked + .slider:before {
+        transform: translateX(13px);
+    }
 }
