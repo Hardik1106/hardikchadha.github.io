@@ -1,4 +1,18 @@
-.navbar{
+body {
+    /* Light mode colors */
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+body.dark-mode {
+    /* Dark mode colors */
+    color: #f4f4f4;
+    background-color: #333;
+}
+
+nav{
+    position: fixed;
+    width: 100%;
     display:flex;
     justify-content: space-evenly;
     background-color: #553b4a;
@@ -7,16 +21,27 @@
     font-family: 'Lobster', cursive;
     font-weight: bold;
     text-align: center;
-    padding: 2%;
-    border-bottom: 1% solid #553b4a;
+    padding: 1em;
+    z-index: 100;
 }
-a{
-    color: white;
-    text-decoration: none;
-}
-a:hover{
+
+nav a:hover{
+    background-color: #dc843c;
     color: #f4f4f4;
-    text-decoration: none;
+    text-decoration:wavy;
+}
+
+.dark-mode nav{
+    display:flex;
+    justify-content: space-evenly;
+    background-color: #dc843c;
+    color: #553b4a;
+    font-size: 150%;
+    font-family: 'Lobster', cursive;
+    font-weight: bold;
+    text-align: center;
+    padding: 2%;
+    border-bottom: 1% solid white;
 }
 
 #main_heading{
@@ -30,6 +55,7 @@ a:hover{
 .top_heading{
     display: flex;
     justify-content: space-evenly;
+    padding-top: 5%;
     align-items: left;
     border-color: #553b4a;
     border-width: .4;
@@ -69,59 +95,52 @@ a:hover{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: left;
 }
-body {
-    /* Light mode colors */
-    color: #333;
-    background-color: #f4f4f4;
-}
-
-body.dark-mode {
-    /* Dark mode colors */
-    color: #f4f4f4;
-    background-color: #333;
-}
 
 .switch {
-    position: relative;
+    position: absolute;
+    border-radius: 50%;
     display: inline-block;
-    width: 60px;
-    height: 34px;
+    width: 5%;
+    height: 5%;
 }
 
 .switch input { 
-    opacity: 0;
+    opacity: 1;
     width: 0;
     height: 0;
 }
 
 .slider {
     position: absolute;
+    border-radius: 32%;
     cursor: pointer;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: rgb(62, 62, 62);
     transition: .4s;
 }
 
 .slider:before {
     position: absolute;
+    border-radius: 50%;
     content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
+    height: 80%;
+    width: 50%;
+    left: 4%;
+    bottom: 10%;
+    background-color: rgb(156, 79, 159);
     transition: .4s;
 }
 
 input:checked + .slider {
-    background-color: #2196F3;
+    color: black;
+    background-color: rgb(218, 218, 218);
 }
 
 input:checked + .slider:before {
-    transform: translateX(26px);
+    transform: translateX(85%);
 }
 
 /* Responsive styles */
