@@ -1,22 +1,36 @@
 window.addEventListener('DOMContentLoaded', (event) => {
-    document.getElementById('darkModeSwitch').addEventListener('change', function(event) {
-        document.body.classList.toggle('dark-mode', event.target.checked);
+    const nav = document.querySelector('.nav');
+    const navLinks = document.querySelectorAll('.nav__link');
+    const sections = document.querySelectorAll('section');
+    const navHeight = nav.getBoundingClientRect().height;
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault();
+            const id = e.currentTarget.getAttribute('href').slice(1);
+            const element = document.getElementById(id);
+            const position = element.offsetTop - navHeight;
+
+            window.scrollTo({
+                left: 0,
+                top: position,
+                behavior: 'smooth'
+            });
+        });
     });
-});
 
-// Select all links in the navigation bar
-var navLinks = document.querySelectorAll('nav a');
+    window.addEventListener('scroll', () => {
+        const scrollHeight = window.pageYOffset;
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - navHeight;
+            const sectionHeight = section.getBoundingClientRect().height;
+            const sectionId = section.getAttribute('id');
 
-// Add a click event listener to each link
-navLinks.forEach(function(link) {
-    link.addEventListener('click', function(event) {
-        // Prevent the default action
-        event.preventDefault();
-
-        // Get the target section
-        var target = document.querySelector(this.getAttribute('href'));
-
-        // Scroll to the target section
-        target.scrollIntoView({ behavior: 'smooth' });
+            if(scrollHeight > sectionTop && scrollHeight <= sectionTop + sectionHeight) {
+                document.querySelector('.nav__item a[href*=' + sectionId + ']').classList.add('active');
+            } else {
+                document.querySelector('.nav__item a[href*=' + sectionId + ']').classList.remove('active');
+            }
+        });
     });
 });
