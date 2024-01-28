@@ -7,28 +7,26 @@
     <link rel="stylesheet" href="home.css">
     <script src="home.js"></script>
 </head>
-
 <nav>
     <a class="active" href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#education">Education</a>
     <a href="#achievments">Achievements</a>
-    <a href="#about">Skills</a>
+    <a href="#skills">Skills</a>
     <a href="#about">Blogs</a>
 </nav>
 <div class="dark-mode-switch">
-    <button id="themeToggle">Toggle Dark/Light Mode</button>
+    <input type="checkbox" id="darkModeSwitch">
+    <label for="darkModeSwitch">Dark Mode</label>
 </div>
 <body>
-    <br>
     <hr>
-    <br>
     <div id="home">
-        <h1 id="main_heading">Hardik Chadha</h1>
+        <h1 class="main_heading">Hardik Chadha</h1>
         <img src="My_Picture.jpeg" id="profilepic" alt="Profile_Picture" align="right">
     </div>
     <div id="about">
-        <h2 id="sub_heading">About Me</h2>
+        <h2 class="sub_heading">About Me</h2>
         <p>
             I am from Jalandhar, Punjab and have completed my schooling from Innocent Hearts School, Jalandhar.
             I am currently a student of First Year at the International Institute of Information Technology (IIITH), 
@@ -39,8 +37,9 @@
             Table Tennis at the National Level.
         </p>
     </div>
+    <hr>
     <div id="education">
-        <h2 id="sub_heading">Education Background</h2>
+        <h2 class="sub_heading">Education Background</h2>
         <h3>International Institute of Information Technology (IIITH)</h3>
         <p>B.Tech and M.S in Computer Science and Engineering, 2023 - Present</p>
         <p>CGPA: 9</p>
@@ -84,8 +83,61 @@
             <li>Punjabi</li>
             <li>Hindi</li>
     </div>
+    <hr>
     <div id="achievements">
-        <h2 id="sub_heading">Achievements</h2>
+        <h2 class="sub_heading">Achievements</h2>
+        <h3>Table Tennis</h3>
+        <h4>National Level</h4>
+        <ul>
+            <li>Participated in the 65th National School Games Table Tennis Championships, 2019-20<br>
+                It was held at Vadodra, Gujarat from 5th to 9th January, 2020<br>
+                I represented Punjab in the U-17 Boys Category.</li>
+            <li>Participated in the 11 Sports Cadet & Sub Junior National Table Tennis Championship, 2018<br>
+                I was part of the Punjab U-15 Boys Team.</li>
+            <li>Participated in the CBSE Nationals, 2019<br>
+                I represented my school there in U-15 category.</li>
+            
+            <li>Participated in a few National Rankings as well/</li>
+        </ul>
+        <h4>State Level</h4>
+        <ul>
+            <li>
+        </ul>
+        <h3>Academics</h3>
+        <ul>
+            <li>Secured 1st position in the 10th class in the school</li>
+            <li>Secured 1st position in the 11th class in the school</li>
+        </ul>
     </div>
+    <hr>
+    <div id="skills">
+        <h2 class="sub_heading">Skills</h2>
+        <h3>Programming Languages</h3>
+        <ul>
+            <li>C</li>
+            <li>C++</li>
+            <li>Python</li>
+        </ul>
+        <h3>Web Development</h3>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+        <h3>Database Management</h3>
+        <ul>
+            <li>MySQL</li>
+        </ul>
+        <h3>Operating Systems</h3>
+        <ul>
+            <li>Windows</li>
+            <li>Linux</li>
+        </ul>
+        <h3>Others</h3>
+        <ul>
+            <li>Microsoft Office</li>
+            <li>Adobe Photoshop</li>
+        </ul>
+    <hr>
 </body>
 </html>
