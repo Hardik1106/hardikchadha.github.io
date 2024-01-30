@@ -104,3 +104,40 @@ nav a:hover {
     text-align: left;
 }
 
+/* BEGIN: Mode switch slider */
+.mode-switch {
+    position: fixed;
+    display: flex;
+}
+
+.mode-switch input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.mode-switch label {
+    position: fixed;
+    display: flex;
+    height: 7%;
+    width: 5%;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #f4f4f4;
+    cursor: pointer;
+    top: 20%;
+    left: 90%;
+    background-color: #553b4a;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+.mode-switch input:checked + label {
+    background-color: #3bb552;
+}
+
+.mode-switch input:hover + label{
+    color: rgb(229, 179, 86);
+}
+
+/* END: Mode switch slider */
