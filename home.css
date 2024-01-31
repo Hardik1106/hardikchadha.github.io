@@ -91,7 +91,7 @@ nav a:hover {
 
 #about, #education, #achievements, #skills, #projects, #contact{
     display: flex;
-    width: 50%;
+    width: 100%;
     flex-direction: column;
     justify-content: space-between;
     align-items: left;
@@ -141,3 +141,38 @@ nav a:hover {
 }
 
 /* END: Mode switch slider */
+
+/* Media Queries */
+@media only screen and (max-width: 600px) {
+    body {
+        margin-top: 25%;
+    }
+
+    nav {
+        font-size: 80%;
+    }
+
+    .main_heading {
+        font-size: 150%;
+    }
+
+    #home {
+        margin-top: 10%;   
+        flex-direction: row;
+    }
+
+    #profilepic {
+        width: 35%;
+        height: 35%;
+    }
+
+    #about, #education, #achievements, #skills, #projects, #contact {
+        width: 80%;
+    }
+    .mode-switch label {
+        height: 4%;
+        width: 13%;
+        top: 13%;
+        left: 85%;
+    }
+}
