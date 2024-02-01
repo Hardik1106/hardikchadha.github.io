@@ -13,7 +13,7 @@
     <a href="#education">Education</a>
     <a href="#achievments">Achievements</a>
     <a href="#skills">Skills</a>
-    <a href="#about">Blogs</a>
+    <a href="#blog-section">Blogs</a>
 </nav>
 <div class="mode-switch">
     <input type="checkbox" id="darkModeSwitch">
@@ -83,6 +83,7 @@
             <li>English</li>
             <li>Punjabi</li>
             <li>Hindi</li>
+        </ul>
     </div>
     <hr width="80%">
     <div id="achievments">
@@ -97,17 +98,15 @@
                 I was part of the Punjab U-15 Boys Team.</li>
             <li>Participated in the CBSE Nationals, 2019<br>
                 I represented my school there in U-15 category.</li>
-            
-            <li>Participated in a few National Rankings as well/</li>
+            <li>Participated in a few National Rankings as well.</li>
         </ul>
         <h4>State Level</h4>
-        <ul>
-            <li>
-        </ul>
+        <p>Won many medals in the different Punjab State Table Tennis Championships.</p>
         <h3>Academics</h3>
         <ul>
-            <li>Secured 1st position in the 10th class in the school</li>
-            <li>Secured 1st position in the 11th class in the school</li>
+            <li>Scored 94% in 10th</li>
+            <li>Scored 95% in 12th</li>
+            <li>Participated in many Olympiads like NSO, IMO, Green Olympiad etc. throughout the years and won prizes in them.</li>
         </ul>
     </div>
     <hr width="80%">
@@ -129,16 +128,80 @@
         <ul>
             <li>MySQL</li>
         </ul>
-        <h3>Operating Systems</h3>
-        <ul>
-            <li>Windows</li>
-            <li>Linux</li>
-        </ul>
         <h3>Others</h3>
         <ul>
-            <li>Microsoft Office</li>
-            <li>Adobe Photoshop</li>
+            <li>Table Tennis</li>
         </ul>
     <hr width="80%">
+    <h2 class="sub_heading">Blog Section</h2>
+    <div id="blog-section">
+        <div class="blog">
+            <h3>Blog 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc id aliquet ullamcorper, mauris nisl
+                ultrices nisl, ac aliquam nunc nunc ac nunc. Nulla facilisi. Sed id semper nisl. Nullam euismod, nunc id
+                aliquet ullamcorper, mauris nisl ultrices nisl, ac aliquam nunc nunc ac nunc. Nulla facilisi.</p>
+            <div class="blog-actions">
+                <button onclick="openBlog('blog1.html')">Read More</button>
+                <div class="like-counter">
+                    <span id="blog1-likes">0</span> Likes
+                    <button onclick="incrementLikes('blog1')">Like</button>
+                </div>
+                <div class="comments-section">
+                    <h4>Comments</h4>
+                    <ul id="blog1-comments">
+                        <!-- Comments will be dynamically added here -->
+                    </ul>
+                    <input type="text" id="blog1-comment-input" placeholder="Add a comment">
+                    <button onclick="addComment('blog1')">Add Comment</button>
+                    <button onclick="deleteAllCommentsAndLikes('blog1')">Delete Comments and Likes</button>
+                </div>
+            </div>
+        </div>
+        <div class="blog">
+            <h3>Blog 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc id aliquet ullamcorper, mauris nisl
+                ultrices nisl, ac aliquam nunc nunc ac nunc. Nulla facilisi. Sed id semper nisl. Nullam euismod, nunc id
+                aliquet ullamcorper, mauris nisl ultrices nisl, ac aliquam nunc nunc ac nunc. Nulla facilisi.</p>
+            <div class="blog-actions">
+                <button onclick="openBlog('blog2.html')">Read More</button>
+                <div class="like-counter">
+                    <span id="blog2-likes">0</span> Likes
+                    <button onclick="incrementLikes('blog2')">Like</button>
+                </div>
+                <div class="comments-section">
+                    <h4>Comments</h4>
+                    <ul id="blog2-comments">
+                        <!-- Comments will be dynamically added here -->
+                    </ul>
+                    <input type="text" id="blog2-comment-input" placeholder="Add a comment">
+                    <button onclick="addComment('blog2')">Add Comment</button>
+                    <button onclick="deleteAllCommentsAndLikes('blog2')">Delete Comments and Likes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr width="80%">
+    <div id="socials">
+        <h2 class="sub_heading">Socials</h2>
+            <h5>Github</h5>
+            <a href="https://github.com/Hardik1106">
+                <p style="text-decoration: none;">Hardik1106</p>
+                <img style = "height: 3%; width: 3%; border-radius: 50%;" src="https://cdn.icon-icons.com/icons2/2351/PNG/512/logo_github_icon_143196.png" alt="GitHub">
+            </a><br>
+            <h5>LinkedIn</h5>
+            <a href="https://www.linkedin.com/in/hardik-chadha-876338266/">
+                <p style="text-decoration:none;">Hardik Chadha</p>
+                <img style = "height: 3%; width: 3%; border-radius: 50%;" src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-1024.png" alt="LinkedIn">
+            </a><br>
+            <h5>Facebook</h5>   
+            <a href="https://www.facebook.com/profile.php?id=100095274043373">
+                <p style="text-decoration: none;">Hardik Chadha</p>
+                <img style = "height: 3%; width: 3%; border-radius: 50%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOK5TJxN5NaxqnAn4C-hlGapyhyC966vN68XrCF5vfzw&s" alt="Facebook">
+            </a><br>   
+            <h5>Mail</h5>
+            <a href="mailto:hardik.chadha@research.iiit.ac.in">
+                <img style = "height: 3%; width: 3%; border-radius: 50%;" src="https://cdn.icon-icons.com/icons2/2631/PNG/512/gmail_new_logo_icon_159149.png" alt="Mail">
+            </a><br>     
+    </div>
 </body>
 </html>
