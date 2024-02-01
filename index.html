@@ -8,39 +8,37 @@
     <script src="home.js"></script>
 </head>
 <nav>
-    <a class="active" href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#education">Education</a>
-    <a href="#achievments">Achievements</a>
-    <a href="#skills">Skills</a>
-    <a href="#blog-section">Blogs</a>
+    <a class="active" href="#home-top">Home</a>
+    <a href="#about-heading">About</a>
+    <a href="#education-heading">Education</a>
+    <a href="#achievments-heading">Achievements</a>
+    <a href="#skills-heading">Skills</a>
+    <a href="#blog-section-heading">Blogs</a>
 </nav>
 <div class="mode-switch">
     <input type="checkbox" id="darkModeSwitch">
     <label for="darkModeSwitch">Mode</label>
 </div>
-<hr>
+<hr id="home-top" style="margin-top: 10%;">
 <body>
     <div id="home">
         <h1 class="main_heading">Hardik Chadha</h1>
         <img src="My_Picture.jpeg" id="profilepic" alt="Profile_Picture" align="right">
     </div>
     <hr width="80%">
+    <h2 style="padding-top: 9%;" id="about-heading">About Me</h2>
     <div id="about">
-        <h2 class="sub_heading">About Me</h2>
         <p>
-            I am from Jalandhar, Punjab and have completed my schooling from Innocent Hearts School, Jalandhar.
-            I am currently a student of First Year at the International Institute of Information Technology (IIITH), 
-            pursuing my B.Tech and M.S in Computer Science and Engineering.
-        </p>
-        <p>
-            In addition to my academic pursuits, I am also interested in sports and have played 
+            I am from Jalandhar, Punjab and have completed my schooling from Innocent Hearts School, Green Model Town, Jalandhar.<br>
+            I am currently pursuing my B.Tech and M.S in Computer Science and Engineering at the 
+            International Institute of Information Technology (IIITH).<br>
+            In addition to my academic pursuits, I am interested in sports and have played 
             Table Tennis at the National Level.
         </p>
     </div>
     <hr width="80%">
+    <h2 style="padding-top: 9%" id="education-heading">Education Background</h2>
     <div id="education">
-        <h2 class="sub_heading">Education Background</h2>
         <h3>International Institute of Information Technology (IIITH)</h3>
         <p>B.Tech and M.S in Computer Science and Engineering, 2023 - Present</p>
         <p>CGPA: 9</p>
@@ -86,8 +84,8 @@
         </ul>
     </div>
     <hr width="80%">
+    <h2 style="padding-top: 9%;" id="achievments-heading">Achievements</h2>
     <div id="achievments">
-        <h2 class="sub_heading">Achievements</h2>
         <h3>Table Tennis</h3>
         <h4>National Level</h4>
         <ul>
@@ -110,8 +108,8 @@
         </ul>
     </div>
     <hr width="80%">
+    <h2 style="padding-top: 9%;" id="skills-heading">Skills</h2>
     <div id="skills">
-        <h2 class="sub_heading">Skills</h2>
         <h3>Programming Languages</h3>
         <ul>
             <li>C</li>
@@ -124,16 +122,12 @@
             <li>CSS</li>
             <li>JavaScript</li>
         </ul>
-        <h3>Database Management</h3>
-        <ul>
-            <li>MySQL</li>
-        </ul>
         <h3>Others</h3>
         <ul>
             <li>Table Tennis</li>
         </ul>
     <hr width="80%">
-    <h2 class="sub_heading">Blog Section</h2>
+    <h2 style="padding-top: 9%;" id="blog-section-heading">Blog Section</h2>
     <div id="blog-section">
         <div class="blog">
             <h3>Blog 1</h3>
@@ -141,7 +135,7 @@
                 ultrices nisl, ac aliquam nunc nunc ac nunc. Nulla facilisi. Sed id semper nisl. Nullam euismod, nunc id
                 aliquet ullamcorper, mauris nisl ultrices nisl, ac aliquam nunc nunc ac nunc. Nulla facilisi.</p>
             <div class="blog-actions">
-                <button onclick="openBlog('blog1.html')">Read More</button>
+                <button onclick="openBlog('blog1.html')">Read More</button><br><br>
                 <div class="like-counter">
                     <span id="blog1-likes">0</span> Likes
                     <button onclick="incrementLikes('blog1')">Like</button>
@@ -152,7 +146,7 @@
                         <!-- Comments will be dynamically added here -->
                     </ul>
                     <input type="text" id="blog1-comment-input" placeholder="Add a comment">
-                    <button onclick="addComment('blog1')">Add Comment</button>
+                    <button onclick="addComment('blog1')">Add Comment</button><br><br>
                     <button onclick="deleteAllCommentsAndLikes('blog1')">Delete Comments and Likes</button>
                 </div>
             </div>
@@ -163,7 +157,7 @@
                 ultrices nisl, ac aliquam nunc nunc ac nunc. Nulla facilisi. Sed id semper nisl. Nullam euismod, nunc id
                 aliquet ullamcorper, mauris nisl ultrices nisl, ac aliquam nunc nunc ac nunc. Nulla facilisi.</p>
             <div class="blog-actions">
-                <button onclick="openBlog('blog2.html')">Read More</button>
+                <button onclick="openBlog('blog2.html')">Read More</button><br><br>
                 <div class="like-counter">
                     <span id="blog2-likes">0</span> Likes
                     <button onclick="incrementLikes('blog2')">Like</button>
@@ -174,34 +168,37 @@
                         <!-- Comments will be dynamically added here -->
                     </ul>
                     <input type="text" id="blog2-comment-input" placeholder="Add a comment">
-                    <button onclick="addComment('blog2')">Add Comment</button>
+                    <button onclick="addComment('blog2')">Add Comment</button><br><br>
                     <button onclick="deleteAllCommentsAndLikes('blog2')">Delete Comments and Likes</button>
                 </div>
             </div>
         </div>
     </div>
+    <br>
     <hr width="80%">
-    <div id="socials">
-        <h2 class="sub_heading">Socials</h2>
-            <h5>Github</h5>
+    <br>
+    <h2>Socials</h2>
+        <div id="socials">
+            <h5>Github: </h5>
             <a href="https://github.com/Hardik1106">
-                <p style="text-decoration: none;">Hardik1106</p>
-                <img style = "height: 3%; width: 3%; border-radius: 50%;" src="https://cdn.icon-icons.com/icons2/2351/PNG/512/logo_github_icon_143196.png" alt="GitHub">
-            </a><br>
-            <h5>LinkedIn</h5>
+                <p>Hardik1106</p>
+                <img style = "height: 7%; width: 7%; border-radius: 50%;" src="https://cdn.icon-icons.com/icons2/2351/PNG/512/logo_github_icon_143196.png" alt="GitHub">
+            </a>
+            <h5>LinkedIn: </h5>
             <a href="https://www.linkedin.com/in/hardik-chadha-876338266/">
-                <p style="text-decoration:none;">Hardik Chadha</p>
-                <img style = "height: 3%; width: 3%; border-radius: 50%;" src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-1024.png" alt="LinkedIn">
-            </a><br>
-            <h5>Facebook</h5>   
+                <p>Hardik Chadha</p>
+                <img style = "height: 4%; width: 4%; border-radius: 50%;" src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-1024.png" alt="LinkedIn">
+            </a>
+            <h5>Facebook: </h5>       
             <a href="https://www.facebook.com/profile.php?id=100095274043373">
-                <p style="text-decoration: none;">Hardik Chadha</p>
-                <img style = "height: 3%; width: 3%; border-radius: 50%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOK5TJxN5NaxqnAn4C-hlGapyhyC966vN68XrCF5vfzw&s" alt="Facebook">
-            </a><br>   
-            <h5>Mail</h5>
+                <p>Hardik Chadha</p>
+                <img style = "height: 12%; width: 12%; border-radius: 50%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOK5TJxN5NaxqnAn4C-hlGapyhyC966vN68XrCF5vfzw&s" alt="Facebook">
+            </a>
+            <h5>Mail: </h5>
             <a href="mailto:hardik.chadha@research.iiit.ac.in">
-                <img style = "height: 3%; width: 3%; border-radius: 50%;" src="https://cdn.icon-icons.com/icons2/2631/PNG/512/gmail_new_logo_icon_159149.png" alt="Mail">
-            </a><br>     
+                <p>hardik.chahda@research.iiit.ac.in</p>
+                <img style = "height: 10%; width: 10%; border-radius: 50%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrY-smf1qkS0IzSbpZJRBknGJYpqGJhb05kQ&usqp=CAU" alt="Mail">
+            </a>
     </div>
 </body>
 </html>
