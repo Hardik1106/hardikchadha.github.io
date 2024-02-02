@@ -1,5 +1,7 @@
 html {
     scroll-behavior: smooth;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -8,37 +10,33 @@ body {
     color: #333;
     background-color: #f4f4f4;
 }
-
 body.dark-mode {
     /* Dark mode colors */
     margin-top: 10%;
     color: #f4f4f4;
     background-color: #333;
 }
-
 .dark-mode .main_heading {
     color: green;
 }
 .dark-mode h2 {
     color: green;
 }
-
 .dark-mode nav {
     background-color: rgb(9, 101, 9);
     color: #333;
 }
-
 .dark-mode nav a {
     color: #f4f4f4;
 }
-
 .dark-mode nav a:hover {
     color: rgb(229, 179, 86);
 }
 
 nav {
     position: fixed;
-    width: 95%;
+    align-items: center;
+    width: 98%;
     top: 4%;
     display: flex;
     justify-content: space-evenly;
@@ -71,6 +69,14 @@ h1{
 h2{
     font-size: 180%;
     font-family: 'Lobster', cursive;
+    font-weight: bold;
+    color: #553b4a;
+    text-align: center;
+}
+
+h3 {
+    font-size: 120%;
+    font-family:'Courier New';
     font-weight: bold;
     color: #553b4a;
     text-align: center;
@@ -134,7 +140,7 @@ h2{
     color: #f4f4f4;
     cursor: pointer;
     top: 20%;
-    left: 90%;
+    left: 93%;
     background-color: #553b4a;
     transition: .4s;
     border-radius: 50%;
@@ -155,9 +161,10 @@ h2{
 #blog-section{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1%;
+    width:90%;
+    justify-content: space-evenly;
+    align-items: left;
+    padding: 2%;
     align-content: center;
     font-size: 90%;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -166,15 +173,30 @@ h2{
 .blog{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    width: 30%;
     align-items: center;
     border-color: #553b4a;
-    border-width: .4;
+    border-width: .3;
     padding : 2%;
     align-content: center;
     font-size: 100%;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
+}
+
+body button{
+    background-color: #553b4a;
+    color: #f4f4f4;
+    border: 2;
+    border-color: #3bb552;
+    padding: 2% 2%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 1% 2%;
+    cursor: pointer;
+    border-radius: 15%;
 }
 
 /* END: Blog section */
