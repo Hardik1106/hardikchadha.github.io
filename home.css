@@ -5,32 +5,9 @@ html {
 }
 
 body {
-    /* Light mode colors */
     margin-top: 10%;
     color: #333;
     background-color: #f4f4f4;
-}
-body.dark-mode {
-    /* Dark mode colors */
-    margin-top: 10%;
-    color: #f4f4f4;
-    background-color: #333;
-}
-.dark-mode .main_heading {
-    color: green;
-}
-.dark-mode h2 {
-    color: green;
-}
-.dark-mode nav {
-    background-color: rgb(9, 101, 9);
-    color: #333;
-}
-.dark-mode nav a {
-    color: #f4f4f4;
-}
-.dark-mode nav a:hover {
-    color: rgb(229, 179, 86);
 }
 
 nav {
@@ -92,27 +69,38 @@ h3 {
     padding: 2%;
     align-content: center;
 }
+h1:hover{
+    animation: fade-in 1s ease-in-out forwards;
+}
+@keyframes fade-in {
+    0% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
 
 #profilepic{
     width: 30%;
     height: 30%;
     border-radius: 50%;
     border: 3px solid #553b4a;
+    cursor: pointer;
 }
 #profilepic:hover{
     opacity: 0.8;
+}
+#profilepic:active{
+    opacity: 0.6;
 }
 
 #about, #education, #achievments, #skills{
     display: flex;
     width: 100%;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: left;
     border-color: #553b4a;
     border-width: .4;
     padding: 2%;
-    align-content: start;
+    align-content: center;
     font-size: 100%;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: left;
@@ -145,17 +133,12 @@ h3 {
     transition: .4s;
     border-radius: 50%;
 }
-
 .mode-switch input:checked + label {
     background-color: #3bb552;
 }
-
 .mode-switch input:hover + label{
     color: rgb(229, 179, 86);
 }
-
-/* END: Mode switch slider */
-
 
 /* BEGIN: Blog section */
 #blog-section{
@@ -163,12 +146,9 @@ h3 {
     flex-direction: row;
     width:90%;
     justify-content: space-evenly;
-    align-items: left;
     padding: 2%;
-    align-content: center;
     font-size: 90%;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align: center;
 }
 .blog{
     display: flex;
@@ -185,21 +165,29 @@ h3 {
     text-align: center;
 }
 
-body button{
+.blog button{
     background-color: #553b4a;
     color: #f4f4f4;
-    border: 2;
     border-color: #3bb552;
     padding: 2% 2%;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    margin: 1% 2%;
+    margin: 2% 2%;
     cursor: pointer;
     border-radius: 15%;
 }
 
-/* END: Blog section */
+#resume{
+    text-align: center;
+    padding: 2%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#resume a{
+    color:#3bb552;
+    text-decoration: none;
+    text-align: center;
+}
 
 #socials {
     display: flex;
@@ -219,6 +207,38 @@ body button{
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    /* Dark mode colors */
+    margin-top: 10%;
+    color: #f4f4f4;
+    background-color: #333;
+}
+.dark-mode .main_heading {
+    color:rgb(229, 179, 86);
+}
+.dark-mode h2 {
+    color:rgb(229, 179, 86);
+}
+.dark-mode nav {
+    background-color: rgb(229, 179, 86);
+    color: #333;
+}
+.dark-mode nav a {
+    color: #f4f4f4;
+}
+.dark-mode nav a:hover {
+    color: #553b4a;
+}
+.dark-mode h3 {
+    color: green;
+}
+.dark-mode button {
+    background-color: #3bb552;
+    color: #553b4a;
+    border-color: rgb(229, 179, 86);
 }
 
 /* Media Queries */

@@ -23,12 +23,12 @@
 <body>
     <div id="home">
         <h1 class="main_heading">Hardik Chadha</h1>
-        <img src="My_Picture.jpeg" id="profilepic" alt="Profile_Picture" align="right">
+        <img src="My_Picture.jpeg" id="profilepic" alt="Profile_Picture" align="right"> 
     </div>
     <hr width="80%">
     <h2 style="padding-top: 9%;" id="about-heading">About Me</h2>
     <div id="about">
-        <p>
+        <p align="center">
             I am from Jalandhar, Punjab and have completed my schooling from Innocent Hearts School, Green Model Town, Jalandhar.<br>
             I am currently pursuing my B.Tech and M.S in Computer Science and Engineering at the 
             International Institute of Information Technology (IIITH).<br>
@@ -44,12 +44,11 @@
         <p>CGPA: 9</p>
         <h5>Courses</h5>
         <h6>First Semester</h6>
-        <ul>
+        <ul  style="margin-left: 20%;">
             <li>Computer Programming</li>
             <li>Digital Systems & Microcontrollers</li>
             <li>Discrete Mathematics</li>
             <li>Real Analysis</li>
-            <li>Linear Algebra</li>
         </ul>
         <h6>Second Semester</h6>
         <ul>
@@ -102,8 +101,10 @@
         <p>Won many medals in the different Punjab State Table Tennis Championships.</p>
         <h3>Academics</h3>
         <ul>
-            <li>Scored 94% in 10th</li>
-            <li>Scored 95% in 12th</li>
+            <li>UGEE Rank: 78</li>
+            <li>10th: 94%</li>
+            <li>12th: 95%</li>
+            <li>Inspire Manak Award for Science Project in IX</li>
             <li>Participated in many Olympiads like NSO, IMO, Green Olympiad etc. throughout the years and won prizes in them.</li>
         </ul>
     </div>
@@ -128,7 +129,7 @@
         </ul>
     <hr width="80%">
     <h2 style="padding-top: 9%;" id="blog-section-heading">Blog Section</h2>
-    <div id="blog-section">
+    <div id="blog-section"> 
         <div class="blog">
             <h3>Blog 1</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc id aliquet ullamcorper, mauris nisl
@@ -136,6 +137,7 @@
                 aliquet ullamcorper, mauris nisl ultrices nisl, ac aliquam nunc nunc ac nunc. Nulla facilisi.</p>
             <div class="blog-actions">
                 <button onclick="openBlog('blog1.html')">Read More</button><br><br>
+                <hr width="80%">
                 <div class="like-counter">
                     <span id="blog1-likes">0</span> Likes
                     <button onclick="incrementLikes('blog1')">Like</button>
@@ -143,7 +145,7 @@
                 <div class="comments-section">
                     <h4>Comments</h4>
                     <ul id="blog1-comments">
-                        <!-- Comments will be dynamically added here -->
+                        <!-- Comments -->
                     </ul>
                     <input type="text" id="blog1-comment-input" placeholder="Add a comment">
                     <button onclick="addComment('blog1')">Add Comment</button><br><br>
@@ -158,6 +160,7 @@
                 aliquet ullamcorper, mauris nisl ultrices nisl, ac aliquam nunc nunc ac nunc. Nulla facilisi.</p>
             <div class="blog-actions">
                 <button onclick="openBlog('blog2.html')">Read More</button><br><br>
+                <hr width="80%">
                 <div class="like-counter">
                     <span id="blog2-likes">0</span> Likes
                     <button onclick="incrementLikes('blog2')">Like</button>
@@ -165,7 +168,7 @@
                 <div class="comments-section">
                     <h4>Comments</h4>
                     <ul id="blog2-comments">
-                        <!-- Comments will be dynamically added here -->
+                        <!-- Comments -->
                     </ul>
                     <input type="text" id="blog2-comment-input" placeholder="Add a comment">
                     <button onclick="addComment('blog2')">Add Comment</button><br><br>
@@ -178,8 +181,8 @@
     <hr width="80%">
     <br>
     <h2>Resume</h2>
-        <div id="resume" align="center">
-            <a style="text-decoration: none; color: black;" href="Resume.pdf">Link to Resume</a>
+        <div id="resume">
+            <a href="Resume.pdf">Link to Resume</a>
         </div>
     <hr width="80%">
     <h2>Socials</h2>

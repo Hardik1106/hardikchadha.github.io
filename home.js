@@ -18,7 +18,6 @@ document.querySelectorAll('nav a').forEach(link => {
     });
 });
 
-// Function to open a blog in a new tab
 function openBlog(url) {
     window.open(url, '_blank');
 }
@@ -102,12 +101,8 @@ window.onload = function() {
     });
 };
 
-// Function to delete all comments and likes for a blog
 function deleteAllCommentsAndLikes(blogId) {
-    // Delete likes
     localStorage.removeItem(blogId + '-likes');
-
-    // Delete comments
     localStorage.removeItem(blogId + '-comments');
+    location.reload();
 }
-
