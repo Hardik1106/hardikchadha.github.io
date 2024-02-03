@@ -2,18 +2,46 @@ html {
     scroll-behavior: smooth;
     max-width: 100%;
     overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
 }
+html:hover {
+    scrollbar-color: rgba(155, 155, 155, 0.7) transparent;
+}
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background-color: blueviolet;
+    border-radius: 20px;
+    border: transparent;
+}
+body:hover::-webkit-scrollbar-thumb {
+    background-color: blueviolet;
+}
+
+
 
 body {
     margin-top: 10%;
     color: #333;
     background-color: #f4f4f4;
 }
+body.dark-mode {
+    margin-top: 10%;
+    color: #f4f4f4;
+    background-color: #333;
+}
+
+
 
 nav {
     position: fixed;
     align-items: center;
-    width: 98%;
+    width: 99.9%;
     top: 4%;
     display: flex;
     justify-content: space-evenly;
@@ -26,55 +54,98 @@ nav {
     padding: 1em 0;
     z-index: 100;
 }
+.dark-mode nav {
+    background-color: rgb(229, 179, 86);
+    color: #333;
+}
 nav a {
     color: #f4f4f4;
     text-decoration: none;
     transition: color 0.3s ease;
 }
+.dark-mode nav a {
+    color: #f4f4f4;
+}
 nav a:hover {
     color: rgb(229, 179, 86);
 }
+.dark-mode nav a:hover {
+    color: blueviolet;
+}
+
+
+
+.mode-switch {
+    position: fixed;
+    display: flex;
+}
+.mode-switch input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.mode-switch label {
+    position: fixed;
+    display: flex;
+    height: 7%;
+    width: 8%;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #f4f4f4;
+    cursor: pointer;
+    top: 20%;
+    left: 90%;
+    background-color: #553b4a;
+    transition: .4s;
+    border-radius: 40%;
+}
+.mode-switch input:checked + label {
+    background-color: blueviolet;
+}
+.mode-switch input:hover + label{
+    color: rgb(229, 179, 86);
+}
+.mode-switch label::before {
+    content: "🌞";
+    font-size: 150%;
+}
+.mode-switch input:checked + label::before {
+    content: "🌜";
+}
+
+
 
 h1{
-    font-size: 250%;
     font-family: 'Lobster', cursive;
     font-weight: bold;
-    color: #553b4a;
+    align-self: center;
     text-align: center;
+    margin-bottom: 10%;
 }
-
-h2{
-    font-size: 180%;
-    font-family: 'Lobster', cursive;
-    font-weight: bold;
+h1 a{
+    font-size: 150%;
     color: #553b4a;
-    text-align: center;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
-
-h3 {
-    font-size: 120%;
-    font-family:'Courier New';
-    font-weight: bold;
-    color: #553b4a;
-    text-align: center;
+.dark-mode h1 a {
+    color:rgb(229, 179, 86);
+}
+h1 a:hover{
+    font-size: 152%;
+    color: rgb(229, 179, 86);
+}
+.dark-mode h1 a:hover {
+    color: blueviolet;
 }
 
 #home{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin-top: 5%;
-    border-color: #553b4a;
-    border-width: .4;
-    padding: 2%;
+    margin: 4%;
+    padding: 4%;
     align-content: center;
-}
-h1:hover{
-    animation: fade-in 1s ease-in-out forwards;
-}
-@keyframes fade-in {
-    0% { opacity: 0.3; }
-    100% { opacity: 1; }
 }
 
 #profilepic{
@@ -84,71 +155,132 @@ h1:hover{
     border: 3px solid #553b4a;
     cursor: pointer;
 }
-#profilepic:hover{
-    opacity: 0.8;
+.dark-mode #profilepic {
+    border-color: rgb(229, 179, 86);
 }
-#profilepic:active{
-    opacity: 0.6;
+#profilepic:hover{
+    border-color: rgb(229, 179, 86);
+}
+.dark-mode #profilepic:hover {
+    border-color: blueviolet;
 }
 
-#about, #education, #achievments, #skills{
+
+
+#about{
     display: flex;
-    width: 100%;
+    width: 95%;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: left;
-    border-color: #553b4a;
-    border-width: .4;
+    align-items: center;
     padding: 2%;
     align-content: center;
     font-size: 100%;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align: left;
+    text-align: center;
+    margin-bottom: 5%;
 }
 
-/* BEGIN: Mode switch slider */
-.mode-switch {
-    position: fixed;
+
+
+#education{
     display: flex;
-}
-
-.mode-switch input[type="checkbox"] {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.mode-switch label {
-    position: fixed;
-    display: flex;
-    height: 7%;
-    width: 5%;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    color: #f4f4f4;
+    padding: 2%;
+    align-content: center;
+    font-size: 100%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 5%;
+}
+#education table{
+    width: 50%;
+    border-collapse: collapse;
+}
+#education table th,
+#education table td {
+    padding: 2%;
+    justify-content: space-evenly;
+    text-align: center;
+    border-bottom: 1px solid #7be040;
+}
+#education table th:hover {
     cursor: pointer;
-    top: 20%;
-    left: 93%;
-    background-color: #553b4a;
-    transition: .4s;
-    border-radius: 50%;
+    background-color: orange;
 }
-.mode-switch input:checked + label {
-    background-color: #3bb552;
-}
-.mode-switch input:hover + label{
-    color: rgb(229, 179, 86);
+#education table tr:hover td:nth-child(2) {
+    cursor: pointer;
+    background-color: blueviolet;
 }
 
-/* BEGIN: Blog section */
+
+
+h2{
+    font-size: 200%;
+    font-family: 'Lobster', cursive;
+    font-weight: bold;
+    color: #553b4a;
+    text-align: center;
+}
+.dark-mode h2 {
+    color:rgb(229, 179, 86);
+}
+
+h3 {
+    font-size: 170%;
+    font-family:'Courier New';
+    font-weight: bold;
+    color: blueviolet;
+    text-align: center;
+}
+h4{
+    font-size: 130%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    color: orange;
+}
+
+h5{
+    font-size: 110%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    color: blueviolet;
+}
+.dark-mode h5 {
+    color: greenyellow;
+}  
+
+h6{
+    font-size: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    color: orange;
+}
+
+#achievments, #skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2%;
+    align-content: center;
+    text-align: left;
+    font-size: 100%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 5%;
+}
+
 #blog-section{
     display: flex;
     flex-direction: row;
-    width:90%;
+    align-content: center;
+    width: 93%;
     justify-content: space-evenly;
     padding: 2%;
-    font-size: 90%;
+    align-items: center;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 5%;
 }
 .blog{
     display: flex;
@@ -156,89 +288,97 @@ h1:hover{
     justify-content: space-evenly;
     width: 30%;
     align-items: center;
-    border-color: #553b4a;
-    border-width: .3;
     padding : 2%;
     align-content: center;
-    font-size: 100%;
+    font-size: 90%;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
 }
-
 .blog button{
     background-color: #553b4a;
     color: #f4f4f4;
     border-color: #3bb552;
-    padding: 2% 2%;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     margin: 2% 2%;
     cursor: pointer;
-    border-radius: 15%;
+}
+.blog img{
+    width: 10%;
+    height: 10%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.dark-mode .blog button {
+    background-color: rgb(229, 179, 86);
+    color: #333;
+    border-color: blueviolet;
+}
+.blog button:hover{
+    background-color: #3bb552;
+    color: #553b4a;
+    border-color: #f4f4f4;
 }
 
 #resume{
     text-align: center;
     padding: 2%;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 10%;
 }
 #resume a{
-    color:#3bb552;
+    color:blueviolet;
     text-decoration: none;
     text-align: center;
 }
 
-#socials {
+#socials{
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
+    padding: 2%;
+    align-content: center;
+    font-size: 100%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 5%;
 }
-
-#socials h5 {
-    margin: 10px 0;
+#socials table{
+    width: 50%;
+    border-collapse: collapse;
+}
+#socials table th,
+#socials table td {
+    padding: 2%;
+    justify-content: space-evenly;
+    text-align: center;
+    border-bottom: 1px solid #7be040;
+}
+#socials table tr td:nth-child(1) {
+    width: 20%;
+}
+#socials table tr:hover td:nth-child(2) {
+    background-color: rgb(229, 179, 86);
 }
 
 #socials a {
     text-decoration: none;
     color: black;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    margin-bottom: 20px;
+    cursor: pointer;
+}
+.dark-mode #socials a {
+    color: blueviolet;
 }
 
-/* Dark Mode */
-body.dark-mode {
-    /* Dark mode colors */
-    margin-top: 10%;
-    color: #f4f4f4;
-    background-color: #333;
-}
-.dark-mode .main_heading {
-    color:rgb(229, 179, 86);
-}
-.dark-mode h2 {
-    color:rgb(229, 179, 86);
-}
-.dark-mode nav {
-    background-color: rgb(229, 179, 86);
-    color: #333;
-}
-.dark-mode nav a {
-    color: #f4f4f4;
-}
-.dark-mode nav a:hover {
-    color: #553b4a;
-}
-.dark-mode h3 {
-    color: green;
-}
-.dark-mode button {
-    background-color: #3bb552;
-    color: #553b4a;
-    border-color: rgb(229, 179, 86);
+footer{
+    font-size: 90%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 /* Media Queries */
@@ -249,20 +389,38 @@ body.dark-mode {
     body.dark-mode {
         margin-top: 25%;
     }
-
     nav {
-        font-size: 80%;
+        width: 94%;
+        font-size: 70%;
     }
-
+    .mode-switch label {
+        font-size: 59%;
+        height: 5%;
+        width: 15%;
+        top: 9%;
+        left: 80%;
+    }
     h1 {
         margin-top: 13%;
         font-size: 150%;
     }
-    #about-heading, #education-heading, #achievments-heading, #skills-heading, #blog-section-heading {
-       margin-top: 15%;
+    h2{
+        font-size: 150%;
     }
-    #home {
-        margin-top: 10%;   
+    h3{
+        font-size: 130%;
+    }
+    h4{
+        font-size: 110%;
+    }
+    h5{
+        font-size: 90%;
+    }
+    h6{
+        font-size: 80%;
+    }
+    #home-top, #about-heading, #education-heading, #achievments-heading, #skills-heading, #blog-section-heading {
+       margin-top: 15%;
     }
 
     #profilepic {
@@ -271,7 +429,7 @@ body.dark-mode {
     }
 
     #about, #education, #achievements, #skills {
-        width: 80%;
+        width: 94%;
     }
     #blog-section {
         width: 100%;
@@ -285,4 +443,18 @@ body.dark-mode {
     #socials {
         align-items: flex-start;
     }
+    .blog {
+        width: 100%;
+        float: none;
+    }
+    #resume {
+        margin-bottom: 15%;
+    }
+    #socials table {
+        width: 100%;
+    }
+    footer {
+        font-size: 50%;
+    }
 }
+

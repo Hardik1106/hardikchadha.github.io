@@ -8,27 +8,29 @@
     <script src="home.js"></script>
 </head>
 <nav>
-    <a class="active" href="#home-top">Home</a>
+    <a href="#home-top">Home</a>
     <a href="#about-heading">About</a>
     <a href="#education-heading">Education</a>
     <a href="#achievments-heading">Achievements</a>
     <a href="#skills-heading">Skills</a>
     <a href="#blog-section-heading">Blogs</a>
+    <a href="#resume-heading">Resume</a>
+    <a href="#socials-heading">Socials</a>
 </nav>
 <div class="mode-switch">
     <input type="checkbox" id="darkModeSwitch">
     <label for="darkModeSwitch">Mode</label>
 </div>
-<hr id="home-top" style="margin-top: 10%;">
+<hr  id="home-top" style="margin-top: 10%;">
 <body>
     <div id="home">
-        <h1 class="main_heading">Hardik Chadha</h1>
+        <h1 class="main_heading"><a href="">Hardik Chadha</a></h1>
         <img src="My_Picture.jpeg" id="profilepic" alt="Profile_Picture" align="right"> 
     </div>
     <hr width="80%">
     <h2 style="padding-top: 9%;" id="about-heading">About Me</h2>
     <div id="about">
-        <p align="center">
+        <p>
             I am from Jalandhar, Punjab and have completed my schooling from Innocent Hearts School, Green Model Town, Jalandhar.<br>
             I am currently pursuing my B.Tech and M.S in Computer Science and Engineering at the 
             International Institute of Information Technology (IIITH).<br>
@@ -41,46 +43,86 @@
     <div id="education">
         <h3>International Institute of Information Technology (IIITH)</h3>
         <h4>B.Tech and M.S in Computer Science and Engineering, 2023 - Present</h4>
-        <p>CGPA: 9</p>
-        <h5>Courses</h5>
-        <h6>First Semester</h6>
-        <ul  style="margin-left: 20%;">
-            <li>Computer Programming</li>
-            <li>Digital Systems & Microcontrollers</li>
-            <li>Discrete Mathematics</li>
-            <li>Real Analysis</li>
-        </ul>
-        <h6>Second Semester</h6>
-        <ul>
-            <li>Data Structures and Algorithms</li>
-            <li>Computer System Organization</li>
-            <li>Internet of Things</li>
-            <li>Introduction to Software Systems</li>
-            <li>Linear Algebra</li>
-        </ul>
+        <table>
+            <p>CGPA: 9</p>
+            <tr>
+                <th><h5>Semester</h5></th>
+                <th><h5>Courses</h5></th>
+            </tr>
+            <tr>
+                <td><h6>First</h6></td>
+                <td>
+                    <ul>
+                        <li>Computer Programming</li>
+                        <li>Digital Systems & Microcontrollers</li>
+                        <li>Discrete Mathematics</li>
+                        <li>Real Analysis</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td><h6>Second</h6></td>
+                <td>
+                    <ul>
+                        <li>Data Structures and Algorithms</li>
+                        <li>Computer System Organization</li>
+                        <li>Internet of Things</li>
+                        <li>Introduction to Software Systems</li>
+                        <li>Linear Algebra</li>
+                    </ul>
+                </td>
+        </table>
+        <br>
         <h3>Innocent Hearts School</h3>
         <h4>XI-XII, 2021 - 2023</h4>
-        <p>Percentage: 95%</p>
-        <h5>Subjects</h5>
-        <ul>
-            <li>Physics</li>
-            <li>Chemistry</li>
-            <li>Mathematics</li>
-            <li>Informatics Practices</li>
-            <li>English</li>   
-        </ul>
+        <table>
+            <p>Percentage: 95%</p>
+            <tr>
+                <th><h5>Subjects</h5></th>
+            </tr>
+            <tr>
+                <td><h6>Physics</h6></td>
+            </tr>
+            <tr>
+                <td><h6>Chemistry</h6></td>
+            </tr>
+            <tr>
+                <td><h6>Maths</h6></td>
+            </tr>
+            <tr>
+                <td><h6>English</h6></td>
+            </tr>
+            <tr>
+                <td><h6>Informatics Practices</h6></td>
+            </tr>
+        </table>
+        <br>
         <h3>Innocent Hearts School</h3>
         <h4> X, 2021</h4>
-        <p>Percentage: 94%</p>
-        <h5>Subjects</h5>
-        <ul>
-            <li>Science</li>
-            <li>Maths</li>
-            <li>Social Studies</li>
-            <li>English</li>
-            <li>Punjabi</li>
-            <li>Hindi</li>
-        </ul>
+        <table>
+            <p>Percentage: 94%</p>
+            <tr>
+                <th><h5>Subjects</h5></th>
+            </tr>
+            <tr>
+                <td><h6>Science</h6></td>
+            </tr>
+            <tr>
+                <td><h6>Maths</h6></td>
+            </tr>
+            <tr>
+                <td><h6>English</h6></td>
+            </tr>
+            <tr>
+                <td><h6>Social Science</h6></td>
+            </tr>
+            <tr>
+                <td><h6>Hindi</h6></td>
+            </tr>
+            <tr>
+                <td><h6>Punjabi</h6></td>
+            </tr>
+        </table>
     </div>
     <hr width="80%">
     <h2 style="padding-top: 9%;" id="achievments-heading">Achievements</h2>
@@ -111,22 +153,10 @@
     <hr width="80%">
     <h2 style="padding-top: 9%;" id="skills-heading">Skills</h2>
     <div id="skills">
-        <h3>Programming Languages</h3>
-        <ul>
-            <li>C</li>
-            <li>C++</li>
-            <li>Python</li>
-        </ul>
-        <h3>Web Development</h3>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-        </ul>
-        <h3>Others</h3>
-        <ul>
-            <li>Table Tennis</li>
-        </ul>
+        <h4>Programming Languages: </h4> C, C++, Python
+        <h4>Web Development: </h4> HTML, CSS, JavaScript
+        <h4>Others: </h4> Table Tennis
+    </div>
     <hr width="80%">
     <h2 style="padding-top: 9%;" id="blog-section-heading">Blog Section</h2>
     <div id="blog-section"> 
@@ -139,16 +169,17 @@
                 <button onclick="openBlog('blog1.html')">Read More</button><br><br>
                 <hr width="80%">
                 <div class="like-counter">
-                    <span id="blog1-likes">0</span> Likes
-                    <button onclick="incrementLikes('blog1')">Like</button>
+                    <span id="blog1-likes">0</span> Likes<br>
+                    <img onclick="incrementLikes('blog1')" src="https://image.similarpng.com/very-thumbnail/2020/06/Icon-like-button-transparent-PNG.png">
                 </div>
+                <hr width="80%">
                 <div class="comments-section">
                     <h4>Comments</h4>
                     <ul id="blog1-comments">
                         <!-- Comments -->
                     </ul>
                     <input type="text" id="blog1-comment-input" placeholder="Add a comment">
-                    <button onclick="addComment('blog1')">Add Comment</button><br><br>
+                    <button onclick="addComment('blog1')">Post</button><br><br>
                     <button onclick="deleteAllCommentsAndLikes('blog1')">Delete Comments and Likes</button>
                 </div>
             </div>
@@ -162,16 +193,17 @@
                 <button onclick="openBlog('blog2.html')">Read More</button><br><br>
                 <hr width="80%">
                 <div class="like-counter">
-                    <span id="blog2-likes">0</span> Likes
-                    <button onclick="incrementLikes('blog2')">Like</button>
+                    <span id="blog2-likes">0</span> Likes<br>
+                    <img onclick="incrementLikes('blog2')" src="https://image.similarpng.com/very-thumbnail/2020/06/Icon-like-button-transparent-PNG.png">
                 </div>
+                <hr width="80%">
                 <div class="comments-section">
                     <h4>Comments</h4>
                     <ul id="blog2-comments">
                         <!-- Comments -->
                     </ul>
                     <input type="text" id="blog2-comment-input" placeholder="Add a comment">
-                    <button onclick="addComment('blog2')">Add Comment</button><br><br>
+                    <button onclick="addComment('blog2')">Post</button><br><br>
                     <button onclick="deleteAllCommentsAndLikes('blog2')">Delete Comments and Likes</button>
                 </div>
             </div>
@@ -180,43 +212,58 @@
     <br>
     <hr width="80%">
     <br>
-    <h2>Resume</h2>
+    <h2 style="padding-top: 9%;" id="resume-heading">Resume</h2>
         <div id="resume">
             <a href="Resume.pdf">Link to Resume</a>
         </div>
     <hr width="80%">
-    <h2>Socials</h2>
+    <h2 style="padding-top: 9%;" id="socials-heading">Socials</h2>
         <div id="socials">
-            <ul>
-                <li>
-                    <h5>Github: </h5>
-                    <a href="https://github.com/Hardik1106">
+            <table>
+                <tr>
+                    <th><h5>Site</h5></th>
+                    <th><h5>ID</h5></th>
+                </tr>
+                <tr>
+                    <td><h6>Github: </h6></td>
+                    <td>
+                        <a href="https://github.com/Hardik1106">
                         <p>Hardik1106</p>
-                        <img style = "height: 4%; width: 4%; border-radius: 50%;" src="https://cdn.icon-icons.com/icons2/2351/PNG/512/logo_github_icon_143196.png" alt="GitHub">
-                    </a>
-                </li>
-                <li>
-                <h5>LinkedIn: </h5>
-                <a href="https://www.linkedin.com/in/hardik-chadha-876338266/">
-                    <p>Hardik Chadha</p>
-                    <img style = "height: 4%; width: 4%; border-radius: 50%;" src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-1024.png" alt="LinkedIn">
-                </a>
-                </li>
-                <li>
-                <h5>Facebook: </h5>       
-                <a href="https://www.facebook.com/profile.php?id=100095274043373">
-                    <p>Hardik Chadha</p>
-                    <img style = "height: 4%; width: 4%; border-radius: 50%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOK5TJxN5NaxqnAn4C-hlGapyhyC966vN68XrCF5vfzw&s" alt="Facebook">
-                </a>
-                </li>
-                <li>
-                <h5>Mail: </h5>
-                <a href="mailto:hardik.chadha@research.iiit.ac.in">
-                    <p>hardik.chahda@research.iiit.ac.in</p>
-                    <img style = "height: 4%; width: 4%; border-radius: 50%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrY-smf1qkS0IzSbpZJRBknGJYpqGJhb05kQ&usqp=CAU" alt="Mail">
-                </a>
-                </li>
-            </ul>
-    </div>
+                        <img style = "height: 4%; width: 4%; border-radius: 50%;" src="https://cdn1.iconfinder.com/data/icons/logotypes/32/github-1024.png" alt="Github">
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><h6>LinkedIn: </h6></td>
+                    <td>
+                        <a href="https://www.linkedin.com/in/hardik-chadha-876338266/">
+                        <p>Hardik Chadha</p>
+                        <img style = "height: 4%; width: 4%; border-radius: 50%;" src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-1024.png" alt="LinkedIn">
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><h6>Facebook: </h6></td>
+                    <td>
+                        <a href="https://www.facebook.com/profile.php?id=100095274043373">
+                        <p>Hardik Chadha</p>
+                        <img style = "height: 4%; width: 4%; border-radius: 50%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOK5TJxN5NaxqnAn4C-hlGapyhyC966vN68XrCF5vfzw&s" alt="Facebook">
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><h6>Mail: </h6></td>
+                    <td>
+                        <a href="mailto:hardik.chadha@research.iiit.ac.in">
+                        <p>hardik.chahda@research.iiit.ac.in</p>
+                        <img style = "height: 4%; width: 4%; border-radius: 50%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrY-smf1qkS0IzSbpZJRBknGJYpqGJhb05kQ&usqp=CAU" alt="Mail">
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <footer>
+            <p>Last Updated: 3rd February, 2024</p>
+        </footer>
 </body>
 </html>
