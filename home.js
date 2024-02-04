@@ -33,7 +33,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Adding Comment
     function addComment(blogId) {
         var commentInput = document.getElementById(blogId + '-comment-input');
         var comment = commentInput.value;
@@ -44,7 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
             commentsList.appendChild(commentItem);
             commentInput.value = '';
 
-            // Store the new comment in local storage
             var comments = localStorage.getItem(blogId + '-comments');
             if (comments) {
                 comments = JSON.parse(comments);
@@ -56,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Restore like count 
+
     window.onload = function() {
         const darkModeSwitch = document.getElementById('darkModeSwitch');
         darkModeSwitch.addEventListener('change', function() {
@@ -76,8 +74,8 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
 
-        // Restore like count
-        var blogIds = ['blog1', 'blog2', 'blog3']; // Replace with actual blog IDs
+ 
+        var blogIds = ['blog1', 'blog2'];
         blogIds.forEach(blogId => {
             var likes = localStorage.getItem(blogId + '-likes');
             if (likes) {
@@ -86,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        // Restore comments
+    
         blogIds.forEach(blogId => {
             var comments = localStorage.getItem(blogId + '-comments');
             if (comments) {
@@ -106,14 +104,14 @@ function openBlog(url) {
     window.open(url, '_blank');
 }
 
-// Function to increment the like counter for a blog
+
 function incrementLikes(blogId) {
     var likesElement = document.getElementById(blogId + '-likes');
     var likes = parseInt(likesElement.innerText);
     likes++;
     likesElement.innerText = likes;
 
-    // Store the updated like count in local storage
+
     localStorage.setItem(blogId + '-likes', likes);
 }
 
