@@ -1,0 +1,312 @@
+/* blog.css - Styles for blog pages only */
+
+/* Base styles with similar scrollbar as home page */
+html {
+    scroll-behavior: smooth;
+    max-width: 100%;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+html:hover {
+    scrollbar-color: rgba(155, 155, 155, 0.7) transparent;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: blueviolet;
+    border-radius: 20px;
+    border: transparent;
+}
+
+body:hover::-webkit-scrollbar-thumb {
+    background-color: blueviolet;
+}
+
+/* Basic body styling with transitions for dark mode */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2em 2em 4em;
+    transition: all 0.3s ease;
+}
+
+body.dark-mode {
+    color: #f4f4f4;
+    background-color: #333;
+}
+
+/* Ensure smooth transitions for blog elements that change with dark mode */
+.blog, .blog h3, .blog p, .blog-actions button, .like-counter, .comments-section, 
+.comments-section h4, .comments-section input, .comments-section button {
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    padding: 2em 0;
+    position: relative;
+}
+
+header h1 {
+    font-family: 'Lobster', cursive, sans-serif;
+    font-size: 2.5em;
+    color: #553b4a;
+    margin-bottom: 0.5em;
+    transition: color 0.3s ease;
+}
+
+body.dark-mode header h1 {
+    color: rgb(229, 179, 86);
+}
+
+/* Blog meta info */
+.blog-meta {
+    text-align: center;
+    color: #666;
+    font-size: 1.1em;
+    margin-bottom: 2.5em;
+    transition: color 0.3s ease;
+}
+
+body.dark-mode .blog-meta {
+    color: #aaa;
+}
+
+/* Navigation buttons */
+.blog-controls {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.home-button {
+    display: flex;
+    height: 40px;
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+    background-color: #553b4a;
+    color: #f4f4f4;
+    border-radius: 50%;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.home-button:hover {
+    background-color: rgb(229, 179, 86);
+}
+
+body.dark-mode .home-button {
+    background-color: rgb(229, 179, 86);
+    color: #333;
+}
+
+body.dark-mode .home-button:hover {
+    background-color: blueviolet;
+    color: #f4f4f4;
+}
+
+/* Main content area */
+main {
+    padding: 1em 0;
+}
+
+/* Article styling */
+article {
+    margin-bottom: 3em;
+}
+
+article h2 {
+    font-family: 'Courier New', monospace;
+    font-size: 1.8em;
+    color: #553b4a;
+    border-bottom: 2px solid #e5b356;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.8em;
+    transition: color 0.3s ease, border-bottom-color 0.3s ease;
+}
+
+body.dark-mode article h2 {
+    color: rgb(229, 179, 86);
+    border-bottom-color: #553b4a;
+}
+
+article p {
+    margin-bottom: 1.2em;
+    text-align: justify;
+}
+
+article ul {
+    padding-left: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+article li {
+    margin-bottom: 0.7em;
+}
+
+/* Author box */
+.blog-author-box {
+    background: #f4f4f4;
+    padding: 1.8em;
+    border-radius: 8px;
+    margin-top: 4em;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    border-left: 4px solid #553b4a;
+    transition: background-color 0.3s ease, border-left-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark-mode .blog-author-box {
+    background: #444;
+    color: #f4f4f4;
+    border-left-color: rgb(229, 179, 86);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+}
+
+.blog-author-box h3 {
+    color: #553b4a;
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 1em;
+    transition: color 0.3s ease;
+}
+
+body.dark-mode .blog-author-box h3 {
+    color: rgb(229, 179, 86);
+}
+
+.blog-author-box a {
+    color: blueviolet;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.blog-author-box a:hover {
+    color: #553b4a;
+    text-decoration: underline;
+}
+
+body.dark-mode .blog-author-box a {
+    color: #e5b356;
+}
+
+body.dark-mode .blog-author-box a:hover {
+    color: blueviolet;
+}
+
+/* Footer */
+.blog-footer {
+    text-align: center;
+    margin-top: 4em;
+    padding-top: 1.5em;
+    color: #666;
+    font-size: 0.95em;
+    border-top: 1px solid #ddd;
+    transition: color 0.3s ease, border-top-color 0.3s ease;
+}
+
+body.dark-mode .blog-footer {
+    color: #aaa;
+    border-top-color: #555;
+}
+
+/* Dark mode toggle button */
+.blog-mode-toggle {
+    display: flex;
+}
+
+.blog-mode-toggle input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.blog-mode-toggle label {
+    display: flex;
+    height: 40px;
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+    color: #f4f4f4;
+    cursor: pointer;
+    background-color: #553b4a;
+    transition: background-color 0.4s;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.blog-mode-toggle input:checked + label {
+    background-color: blueviolet;
+}
+
+.blog-mode-toggle label::before {
+    content: "🌞";
+    font-size: 20px;
+}
+
+.blog-mode-toggle input:checked + label::before {
+    content: "🌜";
+}
+
+/* Responsive design */
+@media only screen and (max-width: 768px) {
+    body {
+        padding: 1em;
+    }
+    
+    header h1 {
+        font-size: 2em;
+        margin-top: 1em;
+    }
+    
+    article h2 {
+        font-size: 1.5em;
+    }
+    
+    .blog-author-box {
+        padding: 1.2em;
+    }
+    
+    .blog-controls {
+        top: 10px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.7em;
+        margin-top: 1.5em;
+    }
+    
+    .blog-controls {
+        top: 10px;
+        right: 10px;
+        gap: 8px;
+    }
+    
+    .blog-mode-toggle label,
+    .home-button {
+        height: 35px;
+        width: 35px;
+        font-size: 18px;
+    }
+}

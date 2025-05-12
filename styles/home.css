@@ -1,0 +1,1090 @@
+html {
+    scroll-behavior: smooth;
+    max-width: 100%;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+html:hover {
+    scrollbar-color: rgba(155, 155, 155, 0.7) transparent;
+}
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background-color: blueviolet;
+    border-radius: 20px;
+    border: transparent;
+}
+body:hover::-webkit-scrollbar-thumb {
+    background-color: blueviolet;
+}
+
+
+
+body {
+    margin-top: 100px; /* Adjusted for fixed navbar height */
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+    /* Only transition color properties to prevent layout shifts */
+    transition: color 0.3s ease, background-color 0.3s ease;
+    /* Improve browser rendering performance */
+    will-change: color, background-color;
+    /* Ensure consistent dimensions */
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+body.dark-mode {
+    /* Only change color properties */
+    color: #f4f4f4;
+    background-color: #333;
+    /* Keep all layout properties identical */
+}
+
+
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+nav {
+    position: fixed;
+    align-items: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-evenly; /* Restore space-evenly for proper button spacing */
+    background-color: #553b4a;
+    color: white;
+    font-size: 150%;
+    font-family: 'Lobster', cursive;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.8em 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+.dark-mode nav {
+    background-color: rgb(229, 179, 86);
+    color: #333;
+}
+nav a {
+    color: #f4f4f4;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.dark-mode nav a {
+    color: #f4f4f4;
+}
+nav a:hover {
+    color: rgb(229, 179, 86);
+}
+.dark-mode nav a:hover {
+    color: blueviolet;
+}
+
+
+
+.nav-controls {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 15px;
+    z-index: 1000;
+}
+
+.mode-switch {
+    display: flex;
+    position: fixed;
+    top: 90px;
+    right: 20px;
+    z-index: 1001; /* Ensure it's above other elements */
+}
+.mode-switch input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.mode-switch label {
+    display: flex;
+    height: 40px;
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+    color: #f4f4f4;
+    cursor: pointer;
+    background-color: #553b4a;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    will-change: transform, background-color; /* Hint to browser for optimization */
+}
+.mode-switch input:checked + label {
+    background-color: blueviolet;
+}
+.mode-switch label::before {
+    content: "🌞";
+    font-size: 20px;
+}
+.mode-switch input:checked + label::before {
+    content: "🌜";
+}
+
+
+
+h1{
+    font-family: 'Lobster', cursive;
+    font-weight: bold;
+    align-self: center;
+    text-align: center;
+    margin-bottom: 10%;
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+h1 a{
+    font-size: 150%;
+    color: #553b4a;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.dark-mode h1 a {
+    color:rgb(229, 179, 86);
+}
+h1 a:hover{
+    font-size: 152%;
+    color: rgb(229, 179, 86);
+}
+.dark-mode h1 a:hover {
+    color: blueviolet;
+}
+
+#home{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 4%;
+    padding: 4%;
+    align-content: center;
+}
+
+#profilepic{
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+    border: 3px solid #553b4a;
+    cursor: pointer;
+}
+.dark-mode #profilepic {
+    border-color: rgb(229, 179, 86);
+}
+#profilepic:hover{
+    border-color: rgb(229, 179, 86);
+}
+.dark-mode #profilepic:hover {
+    border-color: blueviolet;
+}
+
+
+
+#about{
+    display: flex;
+    width: 95%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2%;
+    align-content: center;
+    font-size: 100%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+
+
+#education{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2%;
+    align-content: center;
+    font-size: 100%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 5%;
+}
+#education table{
+    width: 50%;
+    border-collapse: collapse;
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+#education table th,
+#education table td {
+    padding: 2%;
+    justify-content: space-evenly;
+    text-align: center;
+    border-bottom: 1px solid #7be040;
+}
+#education table th:hover {
+    cursor: pointer;
+    background-color: orange;
+}
+#education table tr:hover td:nth-child(2) {
+    cursor: pointer;
+    background-color: blueviolet;
+}
+
+.education-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.education-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.dark-mode .education-card {
+    background-color: #444;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.education-card h3 {
+    color: #553b4a;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.dark-mode .education-card h3 {
+    color: rgb(229, 179, 86);
+}
+
+.education-card h4 {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.dark-mode .education-card h4 {
+    color: #ddd;
+}
+
+.education-score {
+    color: #553b4a;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.dark-mode .education-score {
+    color: rgb(229, 179, 86);
+}
+
+.semester-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.semester-block {
+    padding: 15px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.dark-mode .semester-block {
+    background-color: #333;
+}
+
+.semester-block h5 {
+    color: #553b4a;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.dark-mode .semester-block h5 {
+    color: rgb(229, 179, 86);
+}
+
+.semester-block ul, .subjects-list ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.semester-block ul li, .subjects-list ul li {
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+    color: #555;
+}
+
+.dark-mode .semester-block ul li, 
+.dark-mode .subjects-list ul li {
+    color: #f4f4f4;
+}
+
+.semester-block ul li:before,
+.subjects-list ul li:before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #553b4a;
+}
+
+.dark-mode .semester-block ul li:before,
+.dark-mode .subjects-list ul li:before {
+    color: rgb(229, 179, 86);
+}
+
+
+
+h2{
+    font-size: 200%;
+    font-family: 'Lobster', cursive;
+    font-weight: bold;
+    color: #553b4a;
+    text-align: center;
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+.dark-mode h2 {
+    color:rgb(229, 179, 86);
+}
+
+h3 {
+    font-size: 170%;
+    font-family:'Courier New';
+    font-weight: bold;
+    color: blueviolet;
+    text-align: center;
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+h4{
+    font-size: 130%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    color: orange;
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+h5{
+    font-size: 110%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    color: blueviolet;
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+.dark-mode h5 {
+    color: greenyellow;
+}  
+
+h6{
+    font-size: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    color: orange;
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+#achievments, #skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2%;
+    align-content: center;
+    text-align: left;
+    font-size: 100%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 5%;
+}
+
+.achievements-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.achievement-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    min-width: 280px;
+    flex: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.dark-mode .achievement-card {
+    background-color: #444;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.achievement-card h3 {
+    color: #553b4a;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+.dark-mode .achievement-card h3 {
+    color: rgb(229, 179, 86);
+}
+
+.achievement-content {
+    color: #555;
+}
+
+.dark-mode .achievement-content {
+    color: #f4f4f4;
+}
+
+.achievement-group {
+    margin-bottom: 20px;
+}
+
+.achievement-group h4 {
+    color: #553b4a;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.dark-mode .achievement-group h4 {
+    color: rgb(229, 179, 86);
+}
+
+.achievement-content ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.achievement-content ul li {
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.achievement-content ul li:before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #553b4a;
+}
+
+.dark-mode .achievement-content ul li:before {
+    color: rgb(229, 179, 86);
+}
+
+#skills {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.skill-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    min-width: 250px;
+    flex: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.dark-mode .skill-card {
+    background-color: #444;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.skill-card h3 {
+    color: #553b4a;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.dark-mode .skill-card h3 {
+    color: rgb(229, 179, 86);
+}
+
+.skill-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.skill-item {
+    background-color: #553b4a;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.9em;
+    transition: transform 0.2s ease;
+}
+
+.dark-mode .skill-item {
+    background-color: rgb(229, 179, 86);
+    color: #333;
+}
+
+.skill-item:hover {
+    transform: scale(1.05);
+}
+
+#blog-section{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    width: 95%;
+    justify-content: space-around; /* Changed from space-evenly to space-around for better spacing */
+    padding: 1.5% 2%;
+    gap: 30px; /* Added explicit gap for consistent spacing between blogs */
+    align-items: flex-start; /* Keep tops of blog cards aligned */
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 3%;
+}
+
+/* Enhanced Blog Section Styling */
+#blog-section-heading {
+    margin-bottom: 15px;
+}
+
+.blog {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    width: 45%; /* Increased width for better readability */
+    max-width: 450px; /* Added maximum width */
+    padding: 12px 15px; /* Slightly increased horizontal padding */
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px; /* Added bottom margin for spacing */
+}
+
+.blog:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .blog:hover {
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+.blog h3 {
+    font-size: 120%;
+    padding: 0 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.blog p {
+    margin: 5px 0;
+    padding: 0 5px;
+    line-height: 1.3;
+    font-size: 85%;
+    flex-grow: 1;
+    height: auto; /* Remove the height limit */
+    max-height: none; /* Remove max-height limitation */
+    overflow-y: visible; /* No scrolling needed */
+    text-align: justify;
+    position: relative;
+}
+
+.blog hr {
+    margin: 5px auto;
+    border: none;
+    height: 1px;
+    width: 80%;
+    background-color: rgba(85, 59, 74, 0.2);
+}
+
+.dark-mode .blog hr {
+    background-color: rgba(229, 179, 86, 0.3);
+}
+
+.blog-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 5px;
+    margin-top: 10px; /* Add some space between text and actions */
+}
+
+.comments-section {
+    width: 100%;
+    margin-top: 0;
+}
+
+.comments-section h4 {
+    margin: 3px 0;
+    font-size: 100%;
+}
+
+.comments-section ul {
+    list-style-type: none;
+    padding-left: 5px;
+    margin: 3px 0;
+    max-height: 40px; /* Reduced height for comments */
+    overflow-y: auto;
+    font-size: 80%;
+}
+
+.comments-section input {
+    width: 75%;
+    margin: 3px 0;
+    padding: 4px;
+    font-size: 85%;
+}
+
+.post-button, .delete-button {
+    display: inline-block;
+    margin: 2px !important;
+    padding: 2px 5px !important;
+    font-size: 75% !important;
+    border-radius: 15px !important;
+}
+
+.post-button {
+    background-color: #3bb552 !important;
+    color: white !important;
+    border-color: #2a8c3c !important;
+    margin-right: 5px !important;
+}
+
+.post-button:hover {
+    background-color: #2a8c3c !important;
+}
+
+.delete-button {
+    background-color: #e74c3c !important;
+    color: white !important;
+    border-color: #c0392b !important;
+    font-size: 75% !important;
+}
+
+.delete-button:hover {
+    background-color: #c0392b !important;
+}
+
+.dark-mode .post-button {
+    background-color: #4caf50 !important;
+    color: #333 !important;
+    border-color: #388e3c !important;
+}
+
+.dark-mode .delete-button {
+    background-color: #f44336 !important;
+    color: #333 !important;
+    border-color: #d32f2f !important;
+}
+
+/* Style the buttons side by side */
+.comments-section > button:last-child {
+    display: block;
+    margin: 5px auto !important;
+    font-size: 75% !important;
+}
+
+.dark-mode .blog {
+    background-color: rgba(70, 70, 70, 0.5);
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+.blog button{
+    background-color: #553b4a;
+    color: #f4f4f4;
+    border-color: #3bb552;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 1% 1%;
+    cursor: pointer;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 80%;
+    transition: all 0.2s ease;
+}
+.blog img{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+.dark-mode .blog button {
+    background-color: rgb(229, 179, 86);
+    color: #333;
+    border-color: blueviolet;
+}
+.blog button:hover{
+    background-color: #3bb552;
+    color: #553b4a;
+    border-color: #f4f4f4;
+}
+
+/* Blog Page Styles moved to blog.css */
+
+.blog h3 {
+    margin-top: 5px;
+    margin-bottom: 8px;
+    font-size: 140%;
+}
+
+.blog p {
+    margin: 8px 0;
+    line-height: 1.4;
+    font-size: 95%;
+}
+
+.blog-actions {
+    width: 100%;
+    margin-top: 8px;
+}
+
+.like-counter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin: 5px 0;
+    padding: 3px 7px;
+    background-color: rgba(85, 59, 74, 0.1);
+    border-radius: 15px;
+    font-size: 80%;
+}
+
+.like-counter img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.comments-section {
+    margin-top: 3px;
+    padding: 4px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    max-width: 95%;
+}
+
+.dark-mode .comments-section {
+    background-color: rgba(70, 70, 70, 0.3);
+}
+
+.comments-section h4 {
+    margin: 2px 0;
+    font-size: 95%;
+    color: #553b4a;
+}
+
+.dark-mode .comments-section h4 {
+    color: rgb(229, 179, 86);
+}
+
+.comments-section ul {
+    padding-left: 15px;
+    margin: 5px 0;
+    max-height: 100px;
+    overflow-y: auto;
+    text-align: left;
+}
+
+.comments-section input {
+    width: 75%;
+    margin: 3px 0;
+    padding: 4px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 80%;
+    height: 20px;
+}
+
+.dark-mode .comments-section input {
+    background-color: #444;
+    color: #f4f4f4;
+    border-color: #666;
+}
+
+.post-button, .delete-button {
+    margin: 4px 0 !important;
+    padding: 4px 8px !important;
+    font-size: 85% !important;
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.comments-section input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(85, 59, 74, 0.5);
+    border-color: #553b4a;
+}
+
+.dark-mode .comments-section input:focus {
+    box-shadow: 0 0 5px rgba(229, 179, 86, 0.5);
+    border-color: rgb(229, 179, 86);
+}
+
+.like-button {
+    transition: transform 0.2s ease;
+    filter: grayscale(0.5);
+}
+
+.like-button:hover {
+    transform: scale(1.2);
+    filter: grayscale(0);
+}
+
+#resume{
+    text-align: center;
+    padding: 2%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 10%;
+    /* Detailed styling moved to resume.css */
+}
+
+#socials{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2%;
+    align-content: center;
+    font-size: 100%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 5%;    /* Other styles moved to socials.css */
+}
+
+footer{
+    font-size: 80%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: fixed;
+    bottom: 10px;
+    left: 15px;
+    z-index: 90;
+    padding: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+}
+.dark-mode footer {
+    background-color: rgba(51, 51, 51, 0.7);
+}
+
+.section-heading {
+    scroll-margin-top: 80px; /* For smooth scrolling target positioning */
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.section-divider {
+    margin-top: 70px; /* Restored original top margin */
+    margin-bottom: 20px;
+}
+.dark-mode .section-divider {
+    background-color: rgb(229, 179, 86);
+}
+
+/* Social icon styles moved to socials.css */
+
+/* Custom scrollbars for blog paragraphs */
+.blog p::-webkit-scrollbar {
+    width: 5px;
+}
+
+.blog p::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.blog p::-webkit-scrollbar-thumb {
+    background-color: #553b4a;
+    border-radius: 5px;
+}
+
+.dark-mode .blog p::-webkit-scrollbar-thumb {
+    background-color: rgb(229, 179, 86);
+}
+
+/* Removed overflow indicator since we're showing full content */
+
+/* Media Queries */
+@media only screen and (max-width: 600px) {
+    body {
+        margin-top: 60px; /* Reduced for mobile */
+        padding-top: 0;
+    }
+    body.dark-mode {
+        margin-top: 60px;
+        padding-top: 0;
+    }    
+    nav {
+        width: 100%;
+        font-size: 70%;
+        padding: 0.5em 0;
+    }
+    .mode-switch {
+        top: 45px; /* Adjust for mobile navbar */
+        right: 10px;
+    }
+    
+    .mode-switch label {
+        height: 35px;
+        width: 35px;
+        font-size: 18px; /* Consistent with blog page */
+    }
+    h1 {
+        margin-top: 13%;
+        font-size: 170%;
+    }
+    h2{
+        font-size: 150%;
+    }
+    h3{
+        font-size: 130%;
+    }
+    h4{
+        font-size: 110%;
+    }
+    h5{
+        font-size: 90%;
+    }
+    h6{
+        font-size: 80%;
+    }    
+    .section-heading {
+        padding-top: 60px;
+        scroll-margin-top: 60px;
+    }
+    
+    #home-top {
+        margin-top: 40px;
+        padding-top: 5px;
+    }
+    
+    .section-divider {
+        margin-top: 60px;
+        margin-bottom: 15px;
+    }
+
+    #profilepic {
+        width: 35%;
+        height: 35%;
+    }
+
+    #about, #education, #achievements, #skills {
+        width: 94%;
+    }
+    #blog-section {
+        width: 100%;
+    }    
+    .mode-switch {
+        top: 45px;
+        right: 5px;
+    }
+    
+    .mode-switch label {
+        height: 30px;
+        width: 30px;
+        font-size: 16px;
+    }.blog {
+        width: 100%;
+        float: none;
+    }    #resume {
+        margin-bottom: 15%;
+    }
+    /* Socials responsive styles moved to socials.css */
+    footer {
+        font-size: 60%;
+        bottom: 5px;
+        left: 5px;
+        padding: 3px 6px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #blog-section {
+        flex-direction: column;
+        width: 90%;
+        padding: 1%;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    .blog {
+        width: 90%;
+        max-width: 500px;
+        margin-bottom: 20px;
+    }
+    
+    .blog h3 {
+        font-size: 130%;
+    }
+    .blog p {
+        font-size: 90%;
+        max-height: none;
+        height: auto;
+    }
+    
+    .comments-section {
+        padding: 10px;
+    }
+}
+
+/* Ensure smooth transitions for all elements that change with dark mode */
+nav, nav a, .section-heading, h1, h2, h3, h4, h5, h6, p, li, table {
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Add transitions for input elements and buttons */
+input, button, a.social-btn, a.resume-btn {
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+

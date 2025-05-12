@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hardik Chadha</title>
-    <link rel="stylesheet" href="home.css">
-    <script src="home.js"></script>
+<head>    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Hardik Chadha</title>    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/blog.css">
+    <link rel="stylesheet" href="styles/resume.css">
+    <link rel="stylesheet" href="styles/socials.css">
+    <script src="handlers/home.js"></script>
+    <script src="handlers/blog.js"></script>
 </head>
+<body>
 <nav>
-    <a href="#home-top">Home</a>
+    <a href="#home">Home</a>
     <a href="#about-heading">About</a>
     <a href="#education-heading">Education</a>
     <a href="#achievments-heading">Achievements</a>
@@ -18,17 +20,16 @@
     <a href="#socials-heading">Socials</a>
 </nav>
 <div class="mode-switch">
-    <input type="checkbox" id="darkModeSwitch">
-    <label for="darkModeSwitch">Mode</label>
+    <input type="checkbox" id="darkModeSwitch" aria-label="Toggle dark mode">
+    <label for="darkModeSwitch"></label>
 </div>
-<hr  id="home-top" style="margin-top: 10%;">
-<body>
+<hr class="section-divider">
     <div id="home">
         <h1 class="main_heading"><a href="">Hardik Chadha</a></h1>
         <img src="My_Picture.jpeg" id="profilepic" alt="Profile_Picture" align="right"> 
     </div>
     <hr width="80%">
-    <h2 style="padding-top: 9%;" id="about-heading">About Me</h2>
+    <h2 class="section-heading" id="about-heading">About Me</h2>
     <div id="about">
         <p>
             I am from Jalandhar, Punjab and have completed my schooling from Innocent Hearts School, Green Model Town, Jalandhar.<br>
@@ -39,231 +40,251 @@
         </p>
     </div>
     <hr width="80%">
-    <h2 style="padding-top: 9%" id="education-heading">Education Background</h2>
+    <h2 class="section-heading" id="education-heading">Education Background</h2>
     <div id="education">
-        <h3>International Institute of Information Technology (IIITH)</h3>
-        <h4>B.Tech and M.S in Computer Science and Engineering, 2023 - Present</h4>
-        <table>
-            <p>CGPA: 9</p>
-            <tr>
-                <th><h5>Semester</h5></th>
-                <th><h5>Courses</h5></th>
-            </tr>
-            <tr>
-                <td><h6>First</h6></td>
-                <td>
-                    <ul>
-                        <li>Computer Programming</li>
-                        <li>Digital Systems & Microcontrollers</li>
-                        <li>Discrete Mathematics</li>
-                        <li>Real Analysis</li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <td><h6>Second</h6></td>
-                <td>
-                    <ul>
-                        <li>Data Structures and Algorithms</li>
-                        <li>Computer System Organization</li>
-                        <li>Internet of Things</li>
-                        <li>Introduction to Software Systems</li>
-                        <li>Linear Algebra</li>
-                    </ul>
-                </td>
-        </table>
-        <br>
-        <h3>Innocent Hearts School</h3>
-        <h4>XI-XII, 2021 - 2023</h4>
-        <table>
-            <p>Percentage: 95%</p>
-            <tr>
-                <th><h5>Subjects</h5></th>
-            </tr>
-            <tr>
-                <td><h6>Physics</h6></td>
-            </tr>
-            <tr>
-                <td><h6>Chemistry</h6></td>
-            </tr>
-            <tr>
-                <td><h6>Maths</h6></td>
-            </tr>
-            <tr>
-                <td><h6>English</h6></td>
-            </tr>
-            <tr>
-                <td><h6>Informatics Practices</h6></td>
-            </tr>
-        </table>
-        <br>
-        <h3>Innocent Hearts School</h3>
-        <h4> X, 2021</h4>
-        <table>
-            <p>Percentage: 94%</p>
-            <tr>
-                <th><h5>Subjects</h5></th>
-            </tr>
-            <tr>
-                <td><h6>Science</h6></td>
-            </tr>
-            <tr>
-                <td><h6>Maths</h6></td>
-            </tr>
-            <tr>
-                <td><h6>English</h6></td>
-            </tr>
-            <tr>
-                <td><h6>Social Science</h6></td>
-            </tr>
-            <tr>
-                <td><h6>Hindi</h6></td>
-            </tr>
-            <tr>
-                <td><h6>Punjabi</h6></td>
-            </tr>
-        </table>
-    </div>
-    <hr width="80%">
-    <h2 style="padding-top: 9%;" id="achievments-heading">Achievements</h2>
-    <div id="achievments">
-        <h3>Table Tennis</h3>
-        <h4>National Level</h4>
-        <ul>
-            <li>Participated in the 65th National School Games Table Tennis Championships, 2019-20<br>
-                It was held at Vadodra, Gujarat from 5th to 9th January, 2020<br>
-                I represented Punjab in the U-17 Boys Category.</li>
-            <li>Participated in the 11 Sports Cadet & Sub Junior National Table Tennis Championship, 2018<br>
-                I was part of the Punjab U-15 Boys Team.</li>
-            <li>Participated in the CBSE Nationals, 2019<br>
-                I represented my school there in U-15 category.</li>
-            <li>Participated in a few National Rankings as well.</li>
-        </ul>
-        <h4>State Level</h4>
-        <p>Won many medals in the different Punjab State Table Tennis Championships.</p>
-        <h3>Academics</h3>
-        <ul>
-            <li>UGEE Rank: 78</li>
-            <li>10th: 94%</li>
-            <li>12th: 95%</li>
-            <li>Inspire Manak Award for Science Project in IX</li>
-            <li>Participated in many Olympiads like NSO, IMO, Green Olympiad etc. throughout the years and won prizes in them.</li>
-        </ul>
-    </div>
-    <hr width="80%">
-    <h2 style="padding-top: 9%;" id="skills-heading">Skills</h2>
-    <div id="skills">
-        <h4>Programming Languages: </h4> C, C++, Python
-        <h4>Web Development: </h4> HTML, CSS, JavaScript
-        <h4>Others: </h4> Table Tennis
-    </div>
-    <hr width="80%">
-    <h2 style="padding-top: 9%;" id="blog-section-heading">Blog Section</h2>
-    <div id="blog-section"> 
-        <div class="blog">
-            <h3>Blog 1</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc id aliquet ullamcorper, mauris nisl
-                ultrices nisl, ac aliquam nunc nunc ac nunc. Nulla facilisi. Sed id semper nisl. Nullam euismod, nunc id
-                aliquet ullamcorper, mauris nisl ultrices nisl, ac aliquam nunc nunc ac nunc. Nulla facilisi.</p>
-            <div class="blog-actions">
-                <button onclick="openBlog('blog1.html')">Read More</button><br><br>
-                <hr width="80%">
-                <div class="like-counter">
-                    <span id="blog1-likes">0</span> Likes<br>
-                    <img onclick="incrementLikes('blog1')" src="https://image.similarpng.com/very-thumbnail/2020/06/Icon-like-button-transparent-PNG.png">
+        <div class="education-container">
+            <div class="education-card">
+                <h3>International Institute of Information Technology (IIITH)</h3>
+                <h4>B.Tech and M.S in Computer Science and Engineering, 2023 - Present</h4>
+                <p class="education-score">CGPA: 9.39</p>
+                <div class="semester-grid">
+                    <div class="semester-block">
+                        <h5>First Semester</h5>
+                        <ul>
+                            <li>Computer Programming</li>
+                            <li>Digital Systems & Microcontrollers</li>
+                            <li>Discrete Mathematics</li>
+                            <li>Real Analysis</li>
+                        </ul>
+                    </div>
+                    <div class="semester-block">
+                        <h5>Second Semester</h5>
+                        <ul>
+                            <li>Data Structures and Algorithms</li>
+                            <li>Computer System Organization</li>
+                            <li>Internet of Things</li>
+                            <li>Introduction to Software Systems</li>
+                            <li>Linear Algebra</li>
+                        </ul>
+                    </div>
+                    <div class="semester-block">
+                        <h5>Third Semester</h5>
+                        <ul>
+                            <li>Operating Systems & Networks</li>
+                            <li>Algorithm Analysis & Design</li>
+                            <li>Science I</li>
+                            <li>Probability & Statistics</li>
+                            <li>Automata Theory</li>
+                            <li>Data & Applications</li>
+                            <li>Embedded Systems Workshop</li>
+                        </ul>
+                    </div>
+                    <div class="semester-block">
+                        <h5>Fourth Semester</h5>
+                        <ul>
+                            <li>Design & Analysis of Software Systems</li>
+                            <li>Machine, Data & Learning</li>
+                            <li>Science II</li>
+                            <li>Intro to Human Sciences</li>
+                            <li>Intro to Coding Theory</li>
+                            <li>Intro to Quantum Information & Computing</li>
+                            <li>Intro to Brain & Cognition</li>
+                        </ul>
+                    </div>
                 </div>
-                <hr width="80%">
+            </div>
+
+            <div class="education-card">
+                <h3>Innocent Hearts School</h3>
+                <h4>XI-XII, 2021 - 2023</h4>
+                <p class="education-score">Percentage: 94%</p>
+                <div class="subjects-list">
+                    <ul>
+                        <li>Physics</li>
+                        <li>Chemistry</li>
+                        <li>Maths</li>
+                        <li>English</li>
+                        <li>Informatics Practices</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="education-card">
+                <h3>Innocent Hearts School</h4>
+                <h4>X, 2021</h4>
+                <p class="education-score">Percentage: 93%</p>
+                <div class="subjects-list">
+                    <ul>
+                        <li>Science</li>
+                        <li>Maths</li>
+                        <li>English</li>
+                        <li>Social Science</li>
+                        <li>Hindi</li>
+                        <li>Punjabi</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr width="80%">
+    <h2 class="section-heading" id="achievments-heading">Achievements</h2>
+    <div id="achievments">
+        <div class="achievements-container">
+            <div class="achievement-card sports">
+                <h3>Table Tennis Achievements</h3>
+                <div class="achievement-content">
+                    <div class="achievement-group">
+                        <h4>National Level</h4>
+                        <ul>
+                            <li>65th National School Games Table Tennis Championships (2019-20)</li>
+                            <li>11th Sports Cadet & Sub Junior National Championship (2018)</li>
+                            <li>CBSE Nationals (2019)</li>
+                            <li>Multiple National Rankings Participant</li>
+                        </ul>
+                    </div>
+                    <div class="achievement-group">
+                        <h4>State Level</h4>
+                        <p>Multiple medals in Punjab State Table Tennis Championships</p>
+                    </div>
+                </div>
+            </div>
+            <div class="achievement-card academics">
+                <h3>Academic Achievements</h3>
+                <div class="achievement-content">
+                    <ul>
+                        <li>UGEE Rank: 78</li>
+                        <li>Class XII: 95%</li>
+                        <li>Class X: 94%</li>
+                        <li>Inspire Manak Award - Science Project</li>
+                        <li>Multiple Olympiad Awards (NSO, IMO, Green Olympiad)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr width="80%">
+    <h2 class="section-heading" id="skills-heading">Skills</h2>
+    <div id="skills">
+        <div class="skills-container">
+            <div class="skill-card">
+                <h3>Programming Languages</h3>
+                <div class="skill-items">
+                    <span class="skill-item">C</span>
+                    <span class="skill-item">C++</span>
+                    <span class="skill-item">Python</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3>Web Development</h3>
+                <div class="skill-items">
+                    <span class="skill-item">HTML</span>
+                    <span class="skill-item">CSS</span>
+                    <span class="skill-item">JavaScript</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3>Other Skills</h3>
+                <div class="skill-items">
+                    <span class="skill-item">Table Tennis</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr width="80%">
+    <h2 class="section-heading" id="blog-section-heading">Blog Section</h2>
+    <div id="blog-section">
+        <div class="blog">            <h3>The Impact of Technology on Global Development</h3>
+            <p>Technological advancement has reshaped global economies and societies in the modern era. From artificial intelligence to renewable energy solutions, innovations continue to address challenges and create opportunities for sustainable development across the world.</p>
+            <div class="blog-actions">                <button onclick="openBlog('blog1.html')">Read More</button>                <hr width="60%">
+                <div class="like-counter">
+                    <img data-blog-id="blog1" class="like-button" src="like.png" alt="Like">
+                    <span id="blog1-likes">0</span> Likes
+                </div>
+                <hr width="60%">
                 <div class="comments-section">
                     <h4>Comments</h4>
                     <ul id="blog1-comments">
                         <!-- Comments -->
                     </ul>
-                    <input type="text" id="blog1-comment-input" placeholder="Add a comment">
-                    <button onclick="addComment('blog1')">Post</button><br><br>
-                    <button onclick="deleteAllCommentsAndLikes('blog1')">Delete Comments and Likes</button>
+                    <input type="text" id="blog1-comment-input" placeholder="Add a comment">                    <button class="post-button" data-blog-id="blog1">Post</button>
+                    <button class="delete-button" data-blog-id="blog1">Delete Comments and Likes</button>
                 </div>
             </div>
         </div>
-        <div class="blog">
-            <h3>Blog 2</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc id aliquet ullamcorper, mauris nisl
-                ultrices nisl, ac aliquam nunc nunc ac nunc. Nulla facilisi. Sed id semper nisl. Nullam euismod, nunc id
-                aliquet ullamcorper, mauris nisl ultrices nisl, ac aliquam nunc nunc ac nunc. Nulla facilisi.</p>
-            <div class="blog-actions">
-                <button onclick="openBlog('blog2.html')">Read More</button><br><br>
-                <hr width="80%">
+        <div class="blog">            <h3>Shifting Power Dynamics in the 21st Century</h3>
+            <p>The international system is transforming from a unipolar to multipolar world order. This essay examines how economic centers of gravity are shifting, technological competition is intensifying, and new regional power blocs are forming in our rapidly evolving global landscape.</p>
+            <div class="blog-actions">                <button onclick="openBlog('blog2.html')">Read More</button>                <hr width="60%">
                 <div class="like-counter">
-                    <span id="blog2-likes">0</span> Likes<br>
-                    <img onclick="incrementLikes('blog2')" src="https://image.similarpng.com/very-thumbnail/2020/06/Icon-like-button-transparent-PNG.png">
+                    <img data-blog-id="blog2" class="like-button" src="like.png" alt="Like">
+                    <span id="blog2-likes">0</span> Likes
                 </div>
-                <hr width="80%">
+                <hr width="60%">
                 <div class="comments-section">
                     <h4>Comments</h4>
                     <ul id="blog2-comments">
                         <!-- Comments -->
                     </ul>
-                    <input type="text" id="blog2-comment-input" placeholder="Add a comment">
-                    <button onclick="addComment('blog2')">Post</button><br><br>
-                    <button onclick="deleteAllCommentsAndLikes('blog2')">Delete Comments and Likes</button>
+                    <input type="text" id="blog2-comment-input" placeholder="Add a comment">                    <button class="post-button" data-blog-id="blog2">Post</button>
+                    <button class="delete-button" data-blog-id="blog2">Delete Comments and Likes</button>
+                </div>
+            </div>
+        </div>    </div>
+    <hr width="80%">
+    <h2 class="section-heading" id="resume-heading">My Resume</h2>
+        <div id="resume">
+            <div class="resume-container">
+                <div class="resume-card">
+                    <img class="resume-icon" src="https://cdn-icons-png.flaticon.com/512/3135/3135692.png" alt="Resume Icon">
+                    <h3 class="resume-title">Professional Resume</h3>                    <p class="resume-description">View my complete professional background, skills, and qualifications. My resume includes detailed information about my education, projects, technical skills, and achievements.</p>
+                    <div class="resume-actions">
+                        <a href="Resume.pdf" class="resume-btn" target="_blank" rel="noopener noreferrer" aria-label="View my resume in a new tab">View Resume</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <br>
     <hr width="80%">
-    <br>
-    <h2 style="padding-top: 9%;" id="resume-heading">Resume</h2>
-        <div id="resume">
-            <a href="Resume.pdf">Link to Resume</a>
-        </div>
-    <hr width="80%">
-    <h2 style="padding-top: 9%;" id="socials-heading">Socials</h2>
+    <h2 class="section-heading" id="socials-heading">Connect With Me</h2>
         <div id="socials">
-            <table>
-                <tr>
-                    <th><h5>Site</h5></th>
-                    <th><h5>ID</h5></th>
-                </tr>
-                <tr>
-                    <td><h6>Github: </h6></td>
-                    <td>
-                        <a href="https://github.com/Hardik1106">
-                        <p>Hardik1106</p>
-                        <img style = "height: 4%; width: 4%; border-radius: 50%;" src="https://cdn1.iconfinder.com/data/icons/logotypes/32/github-1024.png" alt="Github">
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td><h6>LinkedIn: </h6></td>
-                    <td>
-                        <a href="https://www.linkedin.com/in/hardik-chadha-876338266/">
-                        <p>Hardik Chadha</p>
-                        <img style = "height: 4%; width: 4%; border-radius: 50%;" src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-1024.png" alt="LinkedIn">
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td><h6>Facebook: </h6></td>
-                    <td>
-                        <a href="https://www.facebook.com/profile.php?id=100095274043373">
-                        <p>Hardik Chadha</p>
-                        <img style = "height: 4%; width: 4%; border-radius: 50%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOK5TJxN5NaxqnAn4C-hlGapyhyC966vN68XrCF5vfzw&s" alt="Facebook">
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td><h6>Mail: </h6></td>
-                    <td>
-                        <a href="mailto:hardik.chadha@research.iiit.ac.in">
-                        <p>hardik.chadha@research.iiit.ac.in</p>
-                        <img style = "height: 4%; width: 4%; border-radius: 50%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrY-smf1qkS0IzSbpZJRBknGJYpqGJhb05kQ&usqp=CAU" alt="Mail">
-                        </a>
-                    </td>
-                </tr>
-            </table>
+            <div class="socials-container">
+                <div class="social-card github-card">
+                    <div class="social-icon-wrapper">
+                        <img class="social-icon" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
+                    </div>
+                    <h3 class="social-title">GitHub</h3>
+                    <p class="social-username">@Hardik1106</p>
+                    <a href="https://github.com/Hardik1106" class="social-btn" rel="noopener noreferrer" target="_blank" aria-label="Visit my GitHub profile">View Profile</a>
+                </div>
+                
+                <div class="social-card linkedin-card">
+                    <div class="social-icon-wrapper">
+                        <img class="social-icon" src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+                    </div>
+                    <h3 class="social-title">LinkedIn</h3>
+                    <p class="social-username">Hardik Chadha</p>
+                    <a href="https://www.linkedin.com/in/hardik-chadha-876338266/" class="social-btn" rel="noopener noreferrer" target="_blank" aria-label="Visit my LinkedIn profile">Connect</a>
+                </div>
+                
+                <div class="social-card facebook-card">
+                    <div class="social-icon-wrapper">
+                        <img class="social-icon" src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook">
+                    </div>
+                    <h3 class="social-title">Facebook</h3>
+                    <p class="social-username">Hardik Chadha</p>
+                    <a href="https://www.facebook.com/profile.php?id=100095274043373" class="social-btn" rel="noopener noreferrer" target="_blank" aria-label="Visit my Facebook profile">Follow</a>
+                </div>
+                
+                <div class="social-card email-card">
+                    <div class="social-icon-wrapper">
+                        <img class="social-icon" src="https://cdn-icons-png.flaticon.com/512/552/552486.png" alt="Email">
+                    </div>
+                    <h3 class="social-title">Email</h3>
+                    <p class="social-username">hardik.chadha@research.iiit.ac.in</p>
+                    <a href="mailto:hardik.chadha@research.iiit.ac.in" class="social-btn" aria-label="Send me an email">Contact Me</a>
+                </div>
+            </div>
         </div>
         <footer>
-            <p>Last Updated: 3rd February, 2024</p>
+            <p>Last Updated: 12th May, 2025</p>
         </footer>
 </body>
 </html>
