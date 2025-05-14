@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Shifting Global Power Dynamics in the 21st Century | Hardik Chadha</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="handlers/blog.css">
-    <script src="styles/blog.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">    <link rel="stylesheet" href="styles/blog.css">
+    <script src="handlers/blog.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Smooth scroll for back-to-top button
+        const backToTopButton = document.querySelector('.back-to-top');
+        if (backToTopButton) {
+            backToTopButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+    });
+    </script>
 </head>
 <body>
     <header>
@@ -63,12 +77,12 @@
         <article>
             <h2>Global Commons and Governance</h2>
             <p>As power diffuses, governance of the global commons—including the high seas, polar regions, outer space, and cyberspace—faces mounting challenges. Established international institutions designed for an earlier era struggle to adapt to new realities and incorporate rising powers' interests and perspectives. This has led to overlapping governance initiatives, competing norm proposals, and institutional innovations reflecting the diversified centers of influence in the international system.</p>
-        </article>
-
-        <article>
+        </article>        <article>
             <h2>Conclusion</h2>
             <p>The 21st century international system is characterized by dynamic complexity rather than static hierarchy. Understanding these evolving power dynamics requires analysis not just of traditional military capabilities and economic indicators but also technological innovation, institutional influence, and normative leadership. How major powers navigate these transitions will significantly shape global stability and development prospects in the coming decades.</p>
         </article>
+        
+        <a href="#" class="back-to-top">Back to Top</a>
 
         <aside class="blog-author-box">
             <h3>About the Author</h3>

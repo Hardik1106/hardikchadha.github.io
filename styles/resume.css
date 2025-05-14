@@ -5,6 +5,7 @@
     align-items: center;
     margin: 30px auto;
     max-width: 800px;
+    box-sizing: border-box; /* Ensures padding is included in width calculations */
 }
 
 .resume-card {
@@ -47,6 +48,17 @@
     width: 80px;
     height: 80px;
     margin: 0 auto 20px;
+    filter: drop-shadow(0 3px 5px rgba(0,0,0,0.2)); /* Add subtle shadow to the icon */
+    transition: transform 0.3s ease; /* Add transition for hover effect */
+    object-fit: contain; /* Ensure proper scaling */
+}
+
+.dark-mode .resume-icon {
+    filter: drop-shadow(0 3px 5px rgba(255,255,255,0.15)); /* Adjusted shadow for dark mode */
+}
+
+.resume-card:hover .resume-icon {
+    transform: scale(1.1); /* Slight scale on hover */
 }
 
 .resume-title {
@@ -137,11 +149,52 @@
 @media only screen and (max-width: 480px) {
     .resume-card {
         padding: 20px;
+        min-height: 300px; /* Ensures consistent height in both modes */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; /* Ensure all content is centered */
+        text-align: center; /* Center all text */
+    }
+    
+    .resume-container {
+        margin: 20px 10px; /* Consistent margins */
+        padding: 0 10px; /* Reduced padding for better space usage */
     }
     
     .resume-icon {
         width: 60px;
         height: 60px;
+        margin-bottom: 15px; /* Consistent spacing */
+    }
+    
+    .resume-title {
+        font-size: 1.4rem; /* Adjusted for consistency */
+        margin: 10px 0; /* Consistent margins */
+        width: 100%; /* Full width to ensure proper centering */
+    }
+    
+    .resume-description {
+        font-size: 0.95rem; /* Slightly reduced for consistency */
+        line-height: 1.5;
+        margin: 0 auto 20px; /* Consistent margins */
+        width: 100%; /* Full width to ensure proper text flow */
+        text-align: center; /* Ensure text is centered */
+    }
+    
+    .resume-actions {
+        width: 100%; /* Full width for proper centering */
+    }
+    
+    .resume-btn {
+        padding: 10px 30px; /* Slightly adjusted for better tap target */
+        width: 80%; /* Control width for consistent appearance */
+        margin: 0 auto; /* Center the button */
+    }
+    
+    /* Fix inconsistencies between light and dark mode */
+    .dark-mode .resume-card, .resume-card {
+        transition: transform 0.25s ease-out, box-shadow 0.25s ease-out;
     }
     
     .resume-actions {

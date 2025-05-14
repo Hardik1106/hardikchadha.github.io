@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>The Impact of Technology on Global Development | Hardik Chadha</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/blog.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">    <link rel="stylesheet" href="styles/blog.css">
     <script src="handlers/blog.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Smooth scroll for back-to-top button
+        const backToTopButton = document.querySelector('.back-to-top');
+        if (backToTopButton) {
+            backToTopButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+    });
+    </script>
 </head>
 <body>    <header>
         <div class="blog-controls">
@@ -44,11 +58,12 @@
                 <li>Digital education platforms democratizing knowledge</li>
                 <li>Smart city infrastructure enhancing urban sustainability</li>
             </ul>
-        </article>
-
-        <article>
+        </article>        <article>
             <h2>Conclusion</h2>
             <p>While technological advancement presents tremendous opportunities, it also introduces complex challenges including digital divides, privacy concerns, and employment disruption. Balanced approaches that leverage innovation while addressing its social implications will be critical for sustainable and inclusive global development in the coming decades.</p>
+        </article>
+        
+        <a href="#" class="back-to-top">Back to Top</a>
         </article>
 
         <aside class="blog-author-box">

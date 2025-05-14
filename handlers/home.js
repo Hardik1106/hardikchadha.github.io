@@ -65,8 +65,73 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(checkBlogOverflow, 500); // Delay slightly to ensure content is rendered
     
     // Recheck on window resize
-    window.addEventListener('resize', checkBlogOverflow);
+    window.addEventListener('resize', checkBlogOverflow);    // Add active class to navbar items when scrolling
+    // Get all sections that have an ID defined
+    const sections = document.querySelectorAll("div[id], h2[id]");
+    const navItems = document.querySelectorAll("nav a");
+    
+    // Add an event listener for scroll
+    window.addEventListener("scroll", navHighlighter);
+    
+    // Run navHighlighter once on page load to set initial active state
+    navHighlighter();
+    
+    // Also run it after a small delay to ensure all elements are properly loaded
+    setTimeout(navHighlighter, 500);
+    
+    setInitialNavbarActive();
+    
+      function navHighlighter() {
+        // Get current scroll position
+        let scrollY = window.pageYOffset;
+        
+        // Now we loop through sections to get height, top and ID values for each
+        sections.forEach(current => {
+            const sectionHeight = current.offsetHeight;
+            const sectionTop = current.offsetTop - 100; // Adjust for navbar height
+            const sectionId = current.getAttribute("id");
+            
+            // If our current scroll position enters the space where the section is
+            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                // Find the corresponding nav item and add active class
+                navItems.forEach(item => {
+                    item.classList.remove("active");
+                    const href = item.getAttribute("href");
+                    
+                    // Check for various conditions to match nav links with sections
+                    if (href === "#" + sectionId || 
+                        (href === "#home" && sectionId === "home") ||
+                        (href === "#" + sectionId.replace("-heading", "")) ||
+                        (href === "#" + sectionId.replace("-section-heading", "-section"))) {
+                        item.classList.add("active");
+                    }
+                });
+            }
+        });
+    }// Navigation code was here
 });
+
+/**
+ * Sets the active state for the navbar item corresponding to the URL hash on page load
+ */
+function setInitialNavbarActive() {
+    const hash = window.location.hash;
+    if (hash) {
+        const navItems = document.querySelectorAll("nav a");
+        navItems.forEach(item => {
+            item.classList.remove("active");
+            if (item.getAttribute("href") === hash) {
+                item.classList.add("active");
+            }
+        });
+    } else {
+        // If no hash, highlight the home link
+        const homeLink = document.querySelector("nav a[href='#home']");
+        if (homeLink) {
+            homeLink.classList.add("active");
+        }
+    }
+}
 
 /**
  * Set up smooth scrolling for navigation links
