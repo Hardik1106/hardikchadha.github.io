@@ -1,3 +1,9 @@
+/******************************
+ * OPTIMIZED CSS - MOBILE FIXES
+ * This version consolidates and removes duplicate mobile styles
+ * Last modified: May 15, 2025
+ ******************************/
+
 html {
     scroll-behavior: smooth;
     max-width: 100%;
@@ -23,33 +29,24 @@ body:hover::-webkit-scrollbar-thumb {
     background-color: blueviolet;
 }
 
-
-
 body {
-    margin-top: 80px; /* Reduced margin to fix spacing with navbar */
+    margin-top: 80px;
     margin-bottom: 0;
     margin-left: 0;
     margin-right: 0;
     padding: 0;
     color: #333;
     background-color: #f4f4f4;
-    /* Only transition color properties to prevent layout shifts */
     transition: color 0.3s ease, background-color 0.3s ease;
-    /* Improve browser rendering performance */
     will-change: color, background-color;
-    /* Ensure consistent dimensions */
     min-height: 100vh;
     width: 100%;
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-x: hidden;
 }
 body.dark-mode {
-    /* Only change color properties */
     color: #f4f4f4;
     background-color: #333;
-    /* Keep all layout properties identical */
 }
-
-
 
 header {
     position: fixed;
@@ -66,7 +63,7 @@ nav {
     top: 0;
     left: 0;
     display: flex;
-    justify-content: space-evenly; /* Space evenly for proper button spacing */
+    justify-content: space-evenly;
     background-color: #553b4a;
     color: white;
     font-size: 150%;
@@ -77,7 +74,7 @@ nav {
     z-index: 100;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    flex-wrap: wrap;
 }
 .dark-mode nav {
     background-color: rgb(229, 179, 86);
@@ -87,10 +84,10 @@ nav a {
     color: #f4f4f4;
     text-decoration: none;
     transition: color 0.3s ease;
-    padding: 10px 15px; /* Add padding for better spacing in desktop */
-    margin: 0 5px; /* Add margin for better spacing between nav items */
-    display: inline-block; /* Ensures the touch target size is applied correctly */
-    min-width: 44px; /* Minimum touch target width */
+    padding: 10px 15px;
+    margin: 0 5px;
+    display: inline-block;
+    min-width: 44px;
     text-align: center;
 }
 .dark-mode nav a {
@@ -127,36 +124,13 @@ nav a.active::after {
 
 .dark-mode nav a.active {
     color: blueviolet !important;
-    text-shadow: 0 0 3px rgba(138, 43, 226, 0.4); /* Add subtle glow around text */
+    text-shadow: 0 0 3px rgba(138, 43, 226, 0.4);
 }
 
 .dark-mode nav a.active::after {
     background-color: blueviolet;
-    box-shadow: 0 0 5px rgba(138, 43, 226, 0.7); /* Add subtle glow to underline */
+    box-shadow: 0 0 5px rgba(138, 43, 226, 0.7);
 }
-
-@media only screen and (max-width: 480px) {
-    nav a.active {
-        background-color: rgba(255, 255, 255, 0.25); /* Stronger background highlight */
-        transform: translateY(-2px); /* More noticeable lift effect */
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25); /* Stronger shadow */
-        border-radius: 8px; /* Rounded corners for better appearance */
-    }
-    
-    .dark-mode nav a.active {
-        background-color: rgba(0, 0, 0, 0.25);
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
-    }
-    
-    /* Make the underline more visible on mobile */
-    nav a.active::after {
-        width: 80%; /* Wider underline on mobile */
-        height: 4px; /* Thicker underline on mobile */
-        bottom: 0; /* Position at the bottom edge */
-    }
-}
-
-
 
 .nav-controls {
     position: absolute;
@@ -170,9 +144,9 @@ nav a.active::after {
 .mode-switch {
     display: flex;
     position: fixed;
-    top: 120px; /* Position at the top to avoid section divider spacing issues */
-    right: 15px;
-    z-index: 1002; /* Ensure it's above other elements including nav */
+    top: 160px;
+    right: 30px;
+    z-index: 1002;
 }
 .mode-switch input[type="checkbox"] {
     opacity: 0;
@@ -191,7 +165,7 @@ nav a.active::after {
     transition: transform 0.2s ease, background-color 0.3s ease;
     border-radius: 50%;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    will-change: transform, background-color; /* Hint to browser for optimization */
+    will-change: transform, background-color;
 }
 .mode-switch input:checked + label {
     background-color: blueviolet;
@@ -203,8 +177,6 @@ nav a.active::after {
 .mode-switch input:checked + label::before {
     content: "🌜";
 }
-
-
 
 h1{
     font-family: 'Lobster', cursive;
@@ -238,7 +210,7 @@ h1 a:hover{
     margin: 0 4% 4%;
     padding: 4%;
     align-content: center;
-    padding-top: 2%; /* Reduced top padding */
+    padding-top: 2%;
 }
 
 #profilepic{
@@ -258,8 +230,6 @@ h1 a:hover{
     border-color: blueviolet;
 }
 
-
-
 #about{
     display: flex;
     width: 95%;
@@ -273,8 +243,6 @@ h1 a:hover{
     text-align: center;
     margin-bottom: 5%;
 }
-
-
 
 #education{
     display: flex;
@@ -372,13 +340,6 @@ h1 a:hover{
     margin-top: 20px;
 }
 
-@media only screen and (max-width: 480px) {
-    .semester-grid {
-        grid-template-columns: 1fr; /* Single column on small screens */
-        gap: 15px;
-    }
-}
-
 .semester-block {
     padding: 15px;
     background-color: #f8f8f8;
@@ -430,8 +391,6 @@ h1 a:hover{
     color: rgb(229, 179, 86);
 }
 
-
-
 h2{
     font-size: 200%;
     font-family: 'Lobster', cursive;
@@ -479,10 +438,11 @@ h6{
     transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
+/* Achievement and Skills sections */
 #achievments, #skills{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     padding: 2%;
     align-content: center;
@@ -490,9 +450,14 @@ h6{
     font-size: 100%;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin-bottom: 5%;
+    width: 94%;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.achievements-container {
+/* Achievement and Skills containers */
+.achievements-container, .skills-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -500,9 +465,12 @@ h6{
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.achievement-card {
+/* Achievement and Skills cards */
+.achievement-card, .skill-card {
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -512,27 +480,28 @@ h6{
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.achievement-card:hover {
+.achievement-card:hover, .skill-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.dark-mode .achievement-card {
+.dark-mode .achievement-card, .dark-mode .skill-card {
     background-color: #444;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
 }
 
-.achievement-card h3 {
+.achievement-card h3, .skill-card h3 {
     color: #553b4a;
     margin-bottom: 20px;
     text-align: center;
     font-size: 1.3em;
 }
 
-.dark-mode .achievement-card h3 {
+.dark-mode .achievement-card h3, .dark-mode .skill-card h3 {
     color: rgb(229, 179, 86);
 }
 
+/* Achievement content styles */
 .achievement-content {
     color: #555;
 }
@@ -577,50 +546,10 @@ h6{
     color: rgb(229, 179, 86);
 }
 
+/* Skills specific styles */
 #skills {
-    width: 100%;
+    width: 94%;
     padding: 20px 0;
-}
-
-.skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.skill-card {
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    min-width: 250px;
-    flex: 1;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.skill-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.dark-mode .skill-card {
-    background-color: #444;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-}
-
-.skill-card h3 {
-    color: #553b4a;
-    margin-bottom: 15px;
-    text-align: center;
-    font-size: 1.2em;
-}
-
-.dark-mode .skill-card h3 {
-    color: rgb(229, 179, 86);
 }
 
 .skill-items {
@@ -633,37 +562,41 @@ h6{
 .skill-item {
     background-color: #553b4a;
     color: white;
-    padding: 8px 16px; /* Increased padding for better touch targets */
-    border-radius: 20px; /* More rounded for pill-like appearance */
-    font-size: 0.95rem; /* Increased for better readability */
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.95rem;
     transition: all 0.3s ease;
-    margin: 5px; /* More space between skills */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.15); /* Subtle shadow for depth */
-    display: inline-block; /* Ensure proper display */
+    margin: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    display: inline-block;
 }
 
 .dark-mode .skill-item {
     background-color: rgb(229, 179, 86);
     color: #333;
-    box-shadow: 0 2px 4px rgba(255,255,255,0.1); /* Adjusted shadow for dark mode */
+    box-shadow: 0 2px 4px rgba(255,255,255,0.1);
 }
 
 .skill-item:hover {
     transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Enhanced shadow on hover */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
+/* Blog section styles */
 #blog-section{
     display: flex;
     flex-direction: row;
     align-content: center;
-    width: 95%;
-    justify-content: space-around; /* Changed from space-evenly to space-around for better spacing */
+    width: 94%;
+    justify-content: space-around;
     padding: 1.5% 2%;
-    gap: 30px; /* Added explicit gap for consistent spacing between blogs */
-    align-items: flex-start; /* Keep tops of blog cards aligned */
+    gap: 30px;
+    align-items: flex-start;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin-bottom: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
 }
 
 /* Enhanced Blog Section Styling */
@@ -676,13 +609,13 @@ h6{
     height: auto;
     display: flex;
     flex-direction: column;
-    width: 45%; /* Increased width for better readability */
-    max-width: 450px; /* Added maximum width */
-    padding: 12px 15px; /* Slightly increased horizontal padding */
+    width: 45%;
+    max-width: 450px;
+    padding: 12px 15px;
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 10px;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 10px; /* Added bottom margin for spacing */
+    margin-bottom: 10px;
 }
 
 .blog:hover {
@@ -707,9 +640,9 @@ h6{
     line-height: 1.3;
     font-size: 85%;
     flex-grow: 1;
-    height: auto; /* Remove the height limit */
-    max-height: none; /* Remove max-height limitation */
-    overflow-y: visible; /* No scrolling needed */
+    height: auto;
+    max-height: none;
+    overflow-y: visible;
     text-align: justify;
     position: relative;
 }
@@ -732,7 +665,7 @@ h6{
     align-items: center;
     width: 100%;
     padding: 0 5px;
-    margin-top: 10px; /* Add some space between text and actions */
+    margin-top: 10px;
 }
 
 .comments-section {
@@ -749,7 +682,7 @@ h6{
     list-style-type: none;
     padding-left: 5px;
     margin: 3px 0;
-    max-height: 40px; /* Reduced height for comments */
+    max-height: 40px;
     overflow-y: auto;
     font-size: 80%;
 }
@@ -823,12 +756,12 @@ h6{
     display: inline-block;
     margin: 1% 1%;
     cursor: pointer;
-    padding: 8px 16px; /* Increased padding for better touch targets */
-    border-radius: 5px; /* Slightly larger radius */
-    font-size: 0.95rem; /* Increased font size for better readability */
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 0.95rem;
     transition: all 0.2s ease;
-    border: none; /* Remove border for cleaner look */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Add subtle shadow */
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 .blog img{
     width: 20px;
@@ -844,27 +777,8 @@ h6{
 .blog button:hover{
     background-color: #3bb552;
     color: #553b4a;
-    transform: translateY(-2px); /* Slight lift effect on hover */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.25); /* Enhanced shadow on hover */
-}
-
-/* Blog Page Styles moved to blog.css */
-
-.blog h3 {
-    margin-top: 5px;
-    margin-bottom: 8px;
-    font-size: 140%;
-}
-
-.blog p {
-    margin: 8px 0;
-    line-height: 1.4;
-    font-size: 95%;
-}
-
-.blog-actions {
-    width: 100%;
-    margin-top: 8px;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.25);
 }
 
 .like-counter {
@@ -886,70 +800,6 @@ h6{
     cursor: pointer;
 }
 
-.comments-section {
-    margin-top: 3px;
-    padding: 4px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 8px;
-    max-width: 95%;
-}
-
-.dark-mode .comments-section {
-    background-color: rgba(70, 70, 70, 0.3);
-}
-
-.comments-section h4 {
-    margin: 2px 0;
-    font-size: 95%;
-    color: #553b4a;
-}
-
-.dark-mode .comments-section h4 {
-    color: rgb(229, 179, 86);
-}
-
-.comments-section ul {
-    padding-left: 15px;
-    margin: 5px 0;
-    max-height: 100px;
-    overflow-y: auto;
-    text-align: left;
-}
-
-.comments-section input {
-    width: 75%;
-    margin: 3px 0;
-    padding: 4px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    font-size: 80%;
-    height: 20px;
-}
-
-.dark-mode .comments-section input {
-    background-color: #444;
-    color: #f4f4f4;
-    border-color: #666;
-}
-
-.post-button, .delete-button {
-    margin: 4px 0 !important;
-    padding: 4px 8px !important;
-    font-size: 85% !important;
-    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.comments-section input:focus {
-    outline: none;
-    box-shadow: 0 0 5px rgba(85, 59, 74, 0.5);
-    border-color: #553b4a;
-}
-
-.dark-mode .comments-section input:focus {
-    box-shadow: 0 0 5px rgba(229, 179, 86, 0.5);
-    border-color: rgb(229, 179, 86);
-}
-
 .like-button {
     transition: transform 0.2s ease;
     filter: grayscale(0.5);
@@ -960,14 +810,15 @@ h6{
     filter: grayscale(0);
 }
 
+/* Resume section */
 #resume{
     text-align: center;
     padding: 2%;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin-bottom: 10%;
-    /* Detailed styling moved to resume.css */
 }
 
+/* Socials section */
 #socials{
     display: flex;
     flex-direction: column;
@@ -977,7 +828,7 @@ h6{
     align-content: center;
     font-size: 100%;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-bottom: 5%;    /* Other styles moved to socials.css */
+    margin-bottom: 5%;
 }
 
 /* Consistent footer styling */
@@ -999,473 +850,532 @@ footer {
 }
 
 .section-heading {
-    scroll-margin-top: 80px; /* For smooth scrolling target positioning */
+    scroll-margin-top: 120px; /* Increased to ensure better visibility when navigating */
     transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Mobile-specific scroll margin */
+@media only screen and (max-width: 600px) {
+    .section-heading {
+        scroll-margin-top: 90px; /* Less margin needed on mobile due to smaller navbar */
+    }
 }
 
 .section-divider {
-    margin-top: 70px; /* Space between nav and content */
+    margin-top: 70px;
     margin-bottom: 20px;
     border: none;
     height: 1px;
-    background-color: transparent;
+    background-color: #ddd;
+    width: 100%;
 }
 .dark-mode .section-divider {
-    background-color: transparent; /* Make invisible in dark mode */
+    background-color: #444;
 }
 
-/* Social icon styles moved to socials.css */
-
-/* Custom scrollbars for blog paragraphs */
-.blog p::-webkit-scrollbar {
-    width: 5px;
+/* Fix gap between section divider and content in dark mode */
+.dark-mode .section-divider + div,
+.dark-mode .section-divider + h2,
+.dark-mode .section-divider + section {
+    margin-top: -10px;
 }
 
-.blog p::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.05);
+/* Improve touch feedback for interactive elements */
+nav a:active,
+.mode-switch label:active,
+.social-btn:active,
+.resume-btn:active,
+button:active {
+    transform: scale(0.95);
+    transition: transform 0.1s;
 }
 
-.blog p::-webkit-scrollbar-thumb {
-    background-color: #553b4a;
-    border-radius: 5px;
-}
-
-.dark-mode .blog p::-webkit-scrollbar-thumb {
-    background-color: rgb(229, 179, 86);
-}
-
-/* Removed overflow indicator since we're showing full content */
-
-/* Media Queries */
+/* MOBILE STYLES - CONSOLIDATED */
 @media only screen and (max-width: 600px) {
-    body {
-        margin-top: 70px; /* Adjusted to match desktop proportions */
-        padding-top: 0;
-        font-size: 16px; /* Base font size for better readability */
-    }
-    body.dark-mode {
-        margin-top: 70px;
-        padding-top: 0;
-    }    
-    nav {
-        width: 100%;
-        font-size: 85%; /* Increased for better visibility */
-        padding: 0.7em 0;
-    }    
-    .mode-switch {
-        top: 120px; /* Consistent with other changes */
-        right: 15px;
-    }
-      .mode-switch label {
-        height: 40px;
-        width: 40px;
-        font-size: 20px; /* Slightly larger for better visibility */
-        box-shadow: 0 3px 8px rgba(0,0,0,0.25); /* Enhanced shadow for better visibility */
-    }    h1 {
-        margin-top: 13%;
-        font-size: 1.9rem; /* Using rem for better scaling */
-        line-height: 1.3; /* Improved line height */
-    }
-    
-    h1 a {
-        font-size: 140%; /* Slightly reduced from desktop to fit better on mobile */
-        letter-spacing: 0.5px; /* Added letter spacing for better readability */
-    }
-    h2 {
-        font-size: 1.5rem;
-    }
-    h3 {
-        font-size: 1.3rem;
-    }
-    h4 {
-        font-size: 1.2rem;
-    }
-    h5 {
-        font-size: 1.1rem;
-    }
-    h6 {
-        font-size: 1rem;
-    }    .section-heading {
-        padding-top: 60px;
-        scroll-margin-top: 60px;
-    }
-    
-    #home-top {
-        margin-top: 40px;
-        padding-top: 5px;
-    }
-    .section-divider {
-        margin-top: 60px;
-        margin-bottom: 20px;
-    }
-    
-    #home {
-        margin-top: 20px; /* Add consistent top margin on mobile */
-        flex-direction: column; /* Change to column layout for better mobile display */
-        align-items: center; /* Center items horizontally */
-        text-align: center; /* Ensure text is centered */
-    }
-
-    #profilepic {
-        width: 60%; /* Larger profile picture on mobile */
-        height: auto; /* Maintain aspect ratio */
-        margin-bottom: 20px; /* Add spacing between image and content */
-    }
-
-    h1.main_heading {
-        width: 100%; /* Full width for better centering */
-        display: flex;
-        justify-content: center;
-        margin-top: 0; /* Remove excess top margin */
-    }
-
-    #about, #education, #achievements, #skills {
-        width: 94%;
-    }
-      #about p, .education-card p, .achievement-content p {
-        font-size: 1rem; /* Slightly larger for better readability */
-        line-height: 1.6;
-        margin: 15px 0; /* Added vertical margin for better spacing */
-    }
-    
-    #about {
-        padding: 15px 10px; /* Adjusted padding for mobile */
-    }
-    
-    #blog-section {
-        width: 100%;
-    }
-    
-    .blog-actions button, .post-button, .delete-button {
-        padding: 8px 16px !important; /* Larger touch targets for mobile */
-        font-size: 0.9rem !important;
-    }
-      .skill-item, .semester-block li, .subjects-list li, .achievement-content li {
-        font-size: 0.95rem;
-        margin-bottom: 8px; /* Increased spacing between list items */
-        line-height: 1.4; /* Better line height for readability */
-    }
-    
-    .education-card h3 {
-        font-size: 1.3rem; /* Adjusted size for mobile */
-    }
-    
-    .education-card h4 {
-        font-size: 1.1rem; /* Adjusted size for mobile */
-    }
-    
-    .semester-block h5, .achievement-group h4 {
-        font-size: 1.05rem; /* Adjusted size for mobile */
-        margin-bottom: 12px; /* Better spacing */
-    }      
-    .mode-switch {
-        top: 120px; /* Keep consistent with other media query */
-        right: 10px;
-    }
-    
-    .mode-switch label {
-        height: 30px;
-        width: 30px;
-        font-size: 16px;
-    }.blog {
-        width: 100%;
-        float: none;
-    }    #resume {
-        margin-bottom: 15%;
-        padding: 10px 0; /* Consistent padding */
-    }
-    /* Socials responsive styles moved to socials.css */
-    footer {
-        font-size: 60%;
-        bottom: 5px;
-        left: 5px;
-        padding: 3px 6px;
-    }
-    /* Ensure consistent spacing in both light and dark modes */
-    body, body.dark-mode {
-        margin-top: 70px; /* Same top margin in both modes */
-        padding-top: 0;
-    }
-    
-    /* Consistent section spacing */
-    .section-heading {
-        padding-top: 60px;
-        margin-top: 10px; /* Add consistent top margin */
-        scroll-margin-top: 60px;
-        width: 100%;
-        text-align: center; /* Center all section headings */
-    }
-      /* Adjust horizontal rules for mobile */
-    hr.section-divider, hr[width="80%"] {
-        width: 85%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 20px;
-    }
-      /* Keeping section dividers consistent between light and dark mode */
-    
-    /* Ensure proper text alignment in all sections */
-    #about, #education, #achievments, #skills, #blog-section, #resume, #socials {
-        width: 94%;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center; /* Center all text */
-    }
-    
-    /* Better education cards for mobile */
-    .education-container {
-        padding: 0 15px;
-    }
-    
-    .education-card {
-        padding: 20px 15px;
-        margin-bottom: 20px;
-        text-align: center; /* Center content */
-    }
-    
-    .education-card h3 {
-        font-size: 1.2rem;
-    }
-    
-    .education-card h4 {
-        font-size: 1rem;
-    }
-    
-    .education-score {
-        font-size: 0.95rem;
-        margin-bottom: 15px;
-    }
-    
-    /* Ensure subjects lists are left-aligned for readability */
-    .subjects-list ul, .semester-block ul {
-        text-align: left;
-        padding-left: 20px;
-    }
-    
-    /* Better achievements layout for mobile */
-    .achievements-container {
-        width: 100%;
-        padding: 0 15px;
-    }
-    
-    .achievement-card {
-        padding: 20px 15px;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-    
-    .achievement-content {
-        text-align: left; /* Keep lists aligned left for readability */
-    }
-    
-    /* Better skills section for mobile */
-    .skills-container {
-        width: 100%;
-        padding: 0 15px;
-    }
-    
-    .skill-card {
-        width: 100%;
-        padding: 15px;
-        margin-bottom: 15px;
-        text-align: center;
-    }
-    
-    .skill-items {
-        justify-content: center; /* Center skill bubbles */
-        flex-wrap: wrap;
-        gap: 8px;
-    }
-    
-    .skill-item {
-        font-size: 0.9rem;
-        padding: 6px 12px;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    #blog-section {
-        flex-direction: column;
-        width: 90%;
-        padding: 1%;
-        align-items: center;
-        gap: 30px;
-    }
-      .blog {
-        width: 90%;
-        max-width: 500px;
-        margin-bottom: 20px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Enhanced shadow for better visibility */
-        padding: 18px; /* Increased padding for better spacing */
-    }
-    
-    .blog h3 {
-        font-size: 1.3rem;
-        margin-bottom: 10px;
-    }
-    
-    .blog p {
-        font-size: 1rem; /* Increased for better readability */
-        line-height: 1.5;
-        max-height: none;
-        height: auto;
-        padding: 0 5px 10px; /* Added padding at bottom for better text spacing */
-    }
-      .comments-section {
-        padding: 15px;
-        background-color: rgba(255, 255, 255, 0.7); /* Slightly more opaque for better readability */
-        border-radius: 10px; /* Increased border radius */
-        margin-top: 15px; /* Added space above comments section */
-    }
-    
-    .dark-mode .comments-section {
-        background-color: rgba(70, 70, 70, 0.7); /* Adjusted for dark mode */
-    }
-    
-    .comments-section h4 {
-        font-size: 1.1rem;
-        margin-bottom: 10px; /* Added margin for better spacing */
-    }
-    
-    .comments-section input {
-        height: 36px; /* Taller input for better touch experience */
-        font-size: 1rem;
-        border-radius: 5px; /* Increased border radius */
-        padding: 0 10px; /* Added horizontal padding */
-        width: 85%; /* Increased width for better usability */
-    }
-}
-
-/* Ensure smooth transitions for all elements that change with dark mode */
-nav, nav a, .section-heading, h1, h2, h3, h4, h5, h6, p, li, table {
-    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
-}
-
-/* Add transitions for input elements and buttons */
-input, button, a.social-btn, a.resume-btn {
-    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Improve navbar for smaller screens */
-@media only screen and (max-width: 768px) {
-    nav {
-        flex-wrap: wrap; /* Allow wrapping for small screens */
-        padding: 0.6em 10px; /* Add horizontal padding */
-        justify-content: space-around; /* Space around for better distribution */
-    }
-    
-    nav a {
-        font-size: 90%; /* Scale down font size */
-        padding: 8px 10px; /* Larger tap targets */
-        margin: 4px 6px; /* Increased margin between items */
-        border-radius: 5px; /* Rounded corners for better look */
-        transition: background-color 0.2s, transform 0.2s; /* Smooth transitions */
-    }
-    
-    nav a:hover, nav a:active {
-        background-color: rgba(255, 255, 255, 0.15); /* Subtle highlight */
-        transform: translateY(-2px); /* Subtle lift effect */
-    }
-    
-    .dark-mode nav a:hover, .dark-mode nav a:active {
-        background-color: rgba(0, 0, 0, 0.15); /* Subtle highlight for dark mode */
-    }
-}
-
-/* Further improvements for very small screens */
-@media only screen and (max-width: 480px) {
-    nav {
-        padding: 0.5em 5px; /* Add horizontal padding */
-        display: grid; /* Change to grid layout */
-        grid-template-columns: repeat(4, 1fr); /* 4 items per row */
-        grid-gap: 5px; /* Space between items */
-        justify-items: center; /* Center items in their cells */
-    }
-    
-    nav a {
-        width: 95%; /* Fill most of the grid cell but leave a small gap */
-        padding: 8px 2px; /* Consistent vertical padding */
-        margin: 2px 0; /* Add vertical margin for spacing */
-        font-size: 0.8rem; /* Consistent font size */
-        display: flex; /* Flexible box for centering */
-        justify-content: center; /* Center text */
-        align-items: center; /* Center vertically */
-        text-align: center; /* Center text */
-        min-height: 44px; /* Increased minimum height for better tap target per accessibility guidelines */
-        box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Subtle shadow */
-        border-radius: 8px; /* More rounded corners for modern look */
-    }
-      /* Ensure mode switch is visible and accessible */
-    .mode-switch {
-        top: 120px; /* Position at top-right corner close to nav */
-        right: 15px;
-        z-index: 1002; /* Make sure it's above other elements */
-    }
-    
-    .mode-switch label {
-        width: 40px;
-        height: 40px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* Enhanced shadow */
-    }
-
-    /* Ensure consistent section spacing */
-    .section-divider, hr[width="80%"] {
-        margin: 15px auto;
-    }
-    
-    /* Add spacing after each section */
+    /* Common section styling */
     #home, #about, #education, #achievments, #skills, #blog-section, #resume, #socials {
+        width: 94%;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+        text-align: center;
         margin-bottom: 30px;
     }
     
-    /* Make sure text never overflows containers */
-    p, h1, h2, h3, h4, h5, h6, ul, li {
-        max-width: 100%;
-        overflow-wrap: break-word;
+    /* Section headings */
+    .section-heading {
+        margin: 20px auto 25px;
+        padding-top: 60px;
+        width: 94%;
+        text-align: center;
     }
     
-    /* Consistent padding around content */
-    .education-card, .achievement-card, .skill-card, .blog, .resume-card, .social-card {
-        padding: 15px;
+    #achievments-heading, #skills-heading, #blog-section-heading {
+        margin-bottom: 25px;
     }
     
-    /* Footer adjustments */
-    footer {
-        padding: 15px 0;
-        margin-top: 30px;
-        font-size: 0.85em;
+    /* Navigation styles */
+    body {
+        margin-top: 70px;
+        padding-top: 0;
+        font-size: 16px;
     }
-}
-
-/* Mode switch positioning for mobile */
-@media only screen and (max-width: 480px) {
+    
+    nav {
+        width: 100%;
+        font-size: 85%;
+        padding: 0.7em 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }    
+    nav a {
+        padding: 8px 6px;
+        margin: 2px;
+        font-size: 1.1rem;
+        flex-basis: 22%;
+        text-align: center;
+        border-radius: 8px;
+        min-height: 44px;
+    }
+    
+    nav a.active {
+        background-color: rgba(255, 255, 255, 0.25);
+        transform: translateY(-1px);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    
+    .dark-mode nav a.active {
+        background-color: rgba(138, 43, 226, 0.25);
+        text-shadow: 0 0 5px rgba(138, 43, 226, 0.5);
+    }
+    
+    /* Mode switch positioning */
     .mode-switch {
-        top: 100px; /* Move higher to avoid space between nav and content */
+        top: 15px;
         right: 10px;
-        z-index: 1002; /* Above content */
+        z-index: 1002;
     }
     
     .mode-switch label {
-        width: 30px; /* Slightly smaller button */
-        height: 30px;
-        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+        width: 40px;
+        height: 40px;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .mode-switch label::before {
+        font-size: 22px;
+    }
+    
+    /* Home section */
+    #home {
+        margin-top: 20px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    #profilepic {
+        width: 60%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    
+    h1.main_heading {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 0;
+    }
+    
+    /* Font size adjustments */
+    h1 {
+        margin-top: 13%;
+        font-size: 1.9rem;
+        line-height: 1.3;
+    }
+    
+    h1 a {
+        font-size: 140%;
+        letter-spacing: 0.5px;
+    }
+    
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.3rem; }
+    h4 { font-size: 1.2rem; }
+    h5 { font-size: 1.1rem; }
+    h6 { font-size: 1rem; }
+    
+    p {
+        font-size: 1rem;
+        line-height: 1.6;
+        text-align: center;
+    }
+    
+    /* Section dividers */
+    .section-divider, hr[width="80%"] {
+        width: 94%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    
+    /* Card containers */
+    .education-card, .resume-card, .social-card {
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .dark-mode .education-card,
+    .dark-mode .resume-card,
+    .dark-mode .social-card {
+        background-color: #444;
+        box-shadow: 0 3px 8px rgba(255, 255, 255, 0.05);
+    }
+    
+    /* Fix margin for last items */
+    .achievements-container .achievement-card:last-child,
+    .skills-container .skill-card:last-child,
+    #blog-section .blog:last-child {
+        margin-bottom: 0;
     }
 }
 
+/* Consolidated mobile styles for achievements, skills and blog sections */
+@media only screen and (max-width: 600px) {
+    /* Common container styling for achievements and skills */
+    .achievements-container, .skills-container {
+        padding: 0;
+        width: 94%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    /* Common card styling */
+    .achievement-card, .skill-card {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 0 20px 0;
+        box-sizing: border-box;
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .achievement-card:hover, .skill-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    }
+    
+    .dark-mode .achievement-card, .dark-mode .skill-card {
+        background-color: #444;
+        box-shadow: 0 3px 8px rgba(255, 255, 255, 0.05);
+    }
+    
+    .dark-mode .achievement-card:hover, .dark-mode .skill-card:hover {
+        box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+    }
+    
+    /* Common card heading */
+    .achievement-card h3, .skill-card h3 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+        color: #553b4a;
+        font-size: 1.3rem;
+    }
+    
+    .dark-mode .achievement-card h3, .dark-mode .skill-card h3 {
+        color: rgb(229, 179, 86);
+    }
+    
+    /* Achievement specific styles */
+    .achievement-group {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+    
+    .achievement-group:last-child {
+        margin-bottom: 0;
+    }
+    
+    .achievement-group h4 {
+        color: #553b4a;
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+        text-align: left;
+    }
+    
+    .dark-mode .achievement-group h4 {
+        color: rgb(229, 179, 86);
+    }
+    
+    .achievement-content {
+        width: 100%;
+        text-align: left;
+        padding: 0;
+    }
+    
+    .achievement-content p {
+        margin: 0 0 15px 0;
+        line-height: 1.5;
+        text-align: left;
+    }
+    
+    .achievement-content ul {
+        padding-left: 5px;
+        margin: 0 0 15px 0;
+        list-style-type: none;
+    }
+    
+    .achievement-content ul:last-child {
+        margin-bottom: 0;
+    }
+    
+    .achievement-content ul li {
+        padding-left: 18px;
+        position: relative;
+        margin-bottom: 8px;
+        line-height: 1.4;
+    }
+    
+    .achievement-content ul li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: #553b4a;
+    }
+    
+    .dark-mode .achievement-content ul li::before {
+        color: rgb(229, 179, 86);
+    }
+    
+    /* Skills specific styles */
+    .skill-items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        padding: 0;
+        margin: 10px 0 5px;
+    }
+    
+    .skill-item {
+        background-color: #553b4a;
+        color: white;
+        padding: 10px 16px;
+        border-radius: 20px;
+        font-size: 0.95rem;
+        margin: 5px;
+        display: inline-block;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    .dark-mode .skill-item {
+        background-color: rgb(229, 179, 86);
+        color: #333;
+        box-shadow: 0 2px 4px rgba(255,255,255,0.1);
+    }
+    
+    .skill-item:active {
+        transform: scale(0.95);
+    }
+      /* Blog section specific styles */
+    #blog-section {
+        width: 94%;
+        padding: 0;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+      .blog {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 0 15px 0;
+        padding: 15px;
+        box-sizing: border-box;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 12px;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    .dark-mode .blog {
+        background-color: rgba(70, 70, 70, 0.5);
+        box-shadow: 0 3px 8px rgba(255, 255, 255, 0.05);
+    }
+    
+    .blog h3 {
+        width: 100%;
+        text-align: center;
+        margin: 0 0 15px 0;
+        font-size: 1.3rem;
+        color: #553b4a;
+    }
+    
+    .dark-mode .blog h3 {
+        color: rgb(229, 179, 86);
+    }
+    
+    .blog p {
+        margin: 0 0 15px 0;
+        padding: 0;
+        line-height: 1.5;
+        font-size: 1rem;
+        text-align: justify;
+    }
+    
+    .blog-actions {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+    
+    .blog button {
+        background-color: #553b4a;
+        color: #f4f4f4;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 0.95rem;
+        margin: 10px auto;
+        cursor: pointer;
+        display: block;
+        min-width: 120px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+    
+    .dark-mode .blog button {
+        background-color: rgb(229, 179, 86);
+        color: #333;
+    }
+    
+    .blog hr {
+        width: 90%;
+        margin: 15px auto;
+        border: none;
+        height: 1px;
+        background-color: rgba(85, 59, 74, 0.2);
+    }
+    
+    .dark-mode .blog hr {
+        background-color: rgba(229, 179, 86, 0.3);
+    }
+      .comments-section {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 10px 0 0 0;
+        padding: 12px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 8px;
+    }
+    
+    .dark-mode .comments-section {
+        background-color: rgba(70, 70, 70, 0.3);
+    }
+    
+    .comments-section h4 {
+        margin: 0 0 8px 0;
+        font-size: 1.1rem;
+    }
+    
+    .comments-section ul {
+        max-height: 80px;
+        margin-bottom: 10px;
+    }
+    
+    .comments-section input {
+        width: 100%;
+        padding: 8px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+    }
+    
+    .post-button, .delete-button {
+        margin: 5px 5px 5px 0;
+        display: inline-block;
+        min-width: 80px;
+        padding: 7px 12px;
+        font-size: 0.9rem;
+        border-radius: 5px;
+    }
+}
+
+/* Tablet-specific styles */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    #blog-section {
+        flex-direction: column;
+        width: 94%;
+        padding: 0;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .blog {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 0 20px 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        padding: 18px;
+        box-sizing: border-box;
+    }
+    
+    .comments-section {
+        padding: 15px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        margin-top: 15px;
+    }
+    
+    .comments-section input {
+        height: 36px;
+        font-size: 1rem;
+        border-radius: 5px;
+        padding: 0 10px;
+        width: 85%;
+    }
+}
+
+/* Landscape orientation mobile view */
 @media only screen and (max-height: 500px) and (orientation: landscape) {
-    /* Optimize for landscape mobile view */
     body {
         margin-top: 70px;
     }
     
     nav {
         padding: 0.4em 5px;
-    }
-    
+    }    
     nav a {
-        font-size: 0.75rem;
-        min-height: 30px;
-        padding: 5px 8px;
+        font-size: 0.9rem;
+        min-height: 25px;
+        padding: 4px 6px;
     }
     
     .section-divider {
@@ -1473,7 +1383,7 @@ input, button, a.social-btn, a.resume-btn {
     }
     
     .mode-switch {
-        top: 90px;
+        top: 15px;
         right: 8px;
     }
     
@@ -1492,26 +1402,41 @@ input, button, a.social-btn, a.resume-btn {
         max-height: 120px;
     }
     
-    /* Enhance scrolling to make content more accessible */
     html {
         scroll-padding-top: 70px;
     }
 }
 
-/* Fix gap between section divider and content in dark mode */
-.dark-mode .section-divider + div,
-.dark-mode .section-divider + h2,
-.dark-mode .section-divider + section {
-    margin-top: -10px; /* Reduce space to compensate for transparent divider */
+/* Ensure smooth transitions for all elements */
+nav, nav a, .section-heading, h1, h2, h3, h4, h5, h6, p, li, table {
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
-/* Improve touch feedback for all interactive elements */
-nav a:active,
-.mode-switch label:active,
-.social-btn:active,
-.resume-btn:active,
-button:active {
-    transform: scale(0.95);
-    transition: transform 0.1s;
+input, button, a.social-btn, a.resume-btn {
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Improve navbar for smaller screens */
+@media only screen and (max-width: 768px) and (min-width: 481px) {
+    nav {
+        flex-wrap: wrap;
+        padding: 0.6em 10px;
+        justify-content: space-around;
+    }    
+    nav a {
+        font-size: 110%;
+        padding: 7px 8px;
+        margin: 4px 6px;
+        border-radius: 5px;
+        transition: background-color 0.2s, transform 0.2s;
+    }
+    
+    nav a:hover, nav a:active {
+        background-color: rgba(255, 255, 255, 0.15);
+        transform: translateY(-2px);
+    }
+    
+    .dark-mode nav a:hover, .dark-mode nav a:active {
+        background-color: rgba(0, 0, 0, 0.15);
+    }
+}

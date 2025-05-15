@@ -4,14 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>The Impact of Technology on Global Development | Hardik Chadha</title>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">    <link rel="stylesheet" href="styles/blog.css">
-    <script src="handlers/blog.js"></script>
-    <script>
+    <script src="handlers/blog.js"></script>    <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Smooth scroll for back-to-top button
+        // Enhanced back-to-top button functionality
         const backToTopButton = document.querySelector('.back-to-top');
         if (backToTopButton) {
-            backToTopButton.addEventListener('click', function(e) {
-                e.preventDefault();
+            // Initially hide the button
+            backToTopButton.style.opacity = '0';
+            backToTopButton.style.visibility = 'hidden';
+            
+            // Show/hide button based on scroll position
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 300) {
+                    backToTopButton.style.opacity = '0.9';
+                    backToTopButton.style.visibility = 'visible';
+                } else {
+                    backToTopButton.style.opacity = '0';
+                    backToTopButton.style.visibility = 'hidden';
+                }
+            });
+              // Smooth scroll functionality
+            backToTopButton.addEventListener('click', function() {
                 window.scrollTo({
                     top: 0,
                     behavior: 'smooth'
@@ -62,9 +75,7 @@
             <h2>Conclusion</h2>
             <p>While technological advancement presents tremendous opportunities, it also introduces complex challenges including digital divides, privacy concerns, and employment disruption. Balanced approaches that leverage innovation while addressing its social implications will be critical for sustainable and inclusive global development in the coming decades.</p>
         </article>
-        
-        <a href="#" class="back-to-top">Back to Top</a>
-        </article>
+          <button type="button" class="back-to-top" aria-label="Back to top of page">Top</button>
 
         <aside class="blog-author-box">
             <h3>About the Author</h3>

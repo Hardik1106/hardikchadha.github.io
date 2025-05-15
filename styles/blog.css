@@ -458,27 +458,57 @@ body.dark-mode .blog-footer {
     article li {
         margin-bottom: 8px;
         font-size: 0.95em;
-        line-height: 1.4;
-    }
-    
-    /* Add section for back-to-top link */
-    .back-to-top {
-        display: block;
-        text-align: center;
+        line-height: 1.4;    }    /* Back-to-top button styling */    .back-to-top {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         margin: 30px auto 15px;
-        padding: 8px 20px;
+        padding: 10px 20px;
         background-color: #553b4a;
         color: #fff;
-        border-radius: 20px;
-        text-decoration: none;
-        font-size: 0.9em;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        border-radius: 30px;
+        font-size: 0.95em;
+        font-weight: 500;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         width: fit-content;
+        transition: all 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+        border: none;
+        cursor: pointer;
+        outline: none;
     }
     
-    .dark-mode .back-to-top {
+    /* Additional selector with higher specificity */
+    main a.back-to-top {
+        text-decoration: none;
+        color: white;
+    }
+      .back-to-top:before {
+        content: "⬆";
+        margin-right: 8px;
+        font-size: 1.1em;
+        font-weight: bold;
+    }
+    
+    .back-to-top:hover {
+        background-color: #624556;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        transform: translateY(-2px);
+    }
+  .dark-mode .back-to-top {
         background-color: rgb(229, 179, 86);
         color: #333;
+    }
+      .dark-mode .back-to-top:hover {
+        background-color: rgb(243, 195, 107);
+    }
+    
+    .back-to-top:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(85, 59, 74, 0.4), 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+    
+    .dark-mode .back-to-top:focus {
+        box-shadow: 0 0 0 3px rgba(229, 179, 86, 0.4), 0 6px 12px rgba(0, 0, 0, 0.3);
     }
     
     /* Improve image handling on mobile */
@@ -554,9 +584,8 @@ body.dark-mode .blog-footer {
         align-items: center;
         justify-content: center;
     }
-    
-    /* Make sure links are clearly distinguishable */
-    article a {
+      /* Make sure links are clearly distinguishable */
+    article a:not(.back-to-top) {
         color: #553b4a;
         font-weight: bold;
         text-decoration: underline;
@@ -564,36 +593,50 @@ body.dark-mode .blog-footer {
         margin: -2px -4px;
         border-radius: 3px;
     }
-    
-    .dark-mode article a {
+      .dark-mode article a:not(.back-to-top) {
         color: rgb(229, 179, 86);
     }
-    
-    article a:hover,
-    article a:active {
+      article a:not(.back-to-top):hover,
+    article a:not(.back-to-top):active {
         background-color: rgba(85, 59, 74, 0.1);
     }
     
-    .dark-mode article a:hover,
-    .dark-mode article a:active {
+    .dark-mode article a:not(.back-to-top):hover,
+    .dark-mode article a:not(.back-to-top):active {
         background-color: rgba(229, 179, 86, 0.1);
-    }
-    
-    /* Make the back-to-top button more prominent */
+    }/* Fixed position back-to-top button for mobile */
     .back-to-top {
-        padding: 10px 24px;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 12px 16px;
         font-size: 1rem;
         font-weight: 500;
-        position: sticky;
-        bottom: 20px;
-        margin: 30px auto 15px;
-        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
-        border: none;
+        margin: 0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        border-radius: 50%;
+        width: auto;
+        height: auto;
+        opacity: 0.9;
+        z-index: 1000;
         transform: translateZ(0); /* Enable hardware acceleration */
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+      .back-to-top:before {
+        content: "⬆";
+        margin-right: 0;
+    }
+      .back-to-top:active {
+        transform: translateY(2px);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     }
     
-    .back-to-top:active {
-        transform: translateY(2px);
-        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    /* Hide back-to-top button when printing */
+    @media print {
+        .back-to-top {
+            display: none !important;
+        }
     }
 }

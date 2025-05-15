@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Hardik Chadha</title>    <link rel="stylesheet" href="styles/home.css">
+<head>    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Hardik Chadha</title>    <!-- Favicon -->    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1157/1157109.png" type="image/png">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/1157/1157109.png" type="image/png">
+    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/1157/1157109.png">
+      <link rel="stylesheet" href="styles/home.css">
     <link rel="stylesheet" href="styles/blog.css">
     <link rel="stylesheet" href="styles/resume.css">    <link rel="stylesheet" href="styles/socials.css">
+    <link rel="stylesheet" href="styles/mobile-fixes.css">
     <script src="handlers/home.js"></script>
     <script src="handlers/blog.js"></script>
 </head>
@@ -22,21 +25,23 @@
     <input type="checkbox" id="darkModeSwitch" aria-label="Toggle dark mode">
     <label for="darkModeSwitch"></label>
 </div>
-<hr class="section-divider">
-    <div id="home">
+<hr class="section-divider">    <div id="home">
         <h1 class="main_heading"><a href="">Hardik Chadha</a></h1>
-        <img src="media/My_Picture.jpeg" id="profilepic" alt="Profile_Picture" align="right"> 
+        <img src="media/My_Picture.jpeg" id="profilepic" alt="Profile_Picture"> 
     </div>
     <hr width="80%">
     <h2 class="section-heading" id="about-heading">About Me</h2>
     <div id="about">
         <p>
-            I am from Jalandhar, Punjab and have completed my schooling from Innocent Hearts School, Green Model Town, Jalandhar.<br>
-            I am currently pursuing my B.Tech and M.S in Computer Science and Engineering at the International Institute of Information Technology (IIITH).<br>
-            In addition to my academic pursuits, I am interested in sports and have played Table Tennis at the National Level.<br>
-            I am currently involved in research at the <strong>Software Engineering Research Center (SERC) Lab</strong>, IIIT Hyderabad, under the guidance of 
-            <a href="https://sites.google.com/view/abhishek-singh/home" target="_blank" rel="noopener" style="text-decoration: none; color: #1b9d8c; font-weight: 500; font-family: 'Segoe UI', Arial, sans-serif; transition: color 0.2s;">Prof. Abhishek Kr Singh</a>.
-            My work focuses on <strong>Trustworthy Automated Programming</strong>, aiming to reduce ambiguity in AI-generated code by aligning natural language intent with formal specifications.
+        I am from Jalandhar, Punjab and have completed my schooling from Innocent Hearts School, Green Model Town, Jalandhar.<br>
+        I am currently pursuing my B.Tech and M.S in Computer Science and Engineering at the International Institute of Information Technology (IIITH).<br>
+        In addition to my academic pursuits, I am interested in sports and have played Table Tennis at the National Level.<br>
+        I am currently involved in research at the 
+        <a href="https://serc.iiit.ac.in/" target="_blank" rel="noopener" style="text-decoration: none; color: #1b9d8c; font-weight: 500; font-family: 'Segoe UI', Arial, sans-serif; transition: color 0.2s;">
+        Software Engineering Research Center (SERC) Lab</a>, IIIT Hyderabad, under the guidance of 
+        <a href="https://sites.google.com/view/abhishek-singh/home" target="_blank" rel="noopener" style="text-decoration: none; color: #1b9d8c; font-weight: 500; font-family: 'Segoe UI', Arial, sans-serif; transition: color 0.2s;">
+        Prof. Abhishek Kr Singh</a>.
+        My work focuses on <strong>Trustworthy Automated Programming</strong>, aiming to reduce ambiguity in AI-generated code by aligning natural language intent with formal specifications.
         </p>
     </div>
     <hr width="80%">
@@ -128,6 +133,9 @@
     </div>
     <hr width="80%">
     <h2 class="section-heading" id="achievments-heading">Achievements</h2>
+    <!-- Note for future development: The ID "achievments" is misspelled (missing an "e").
+     Consider updating all instances to "achievements" for better maintainability.
+     Current HTML uses "achievments" to match existing CSS selectors. -->
     <div id="achievments">
         <div class="achievements-container">
             <div class="achievement-card sports">
